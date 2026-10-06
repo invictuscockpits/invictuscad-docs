@@ -20,27 +20,85 @@ holes) for three-axis mills and routers. Posts are included for **Tormach PathPi
 
 ## Your first program
 
-This walks through facing and profiling a simple plate. You need a body to machine; if you don't
-have one, follow [Your first part](../getting-started/first-part.md) first.
+This walks through facing and cutting out the 5 × 3 inch plate from
+[Your first part](../getting-started/first-part.md) on a Tormach PCNC 770. Open that part (or any
+body of your own) in InvictusCAD first.
 
-1. **Switch to CAM.** In the top bar, click **CAM** (next to **DESIGN**). The toolbar changes to
-   **SETUP**, **MILL 2D**, **ACTIONS** and **MANAGE**.
-2. **Import your tools** (once). Click **MANAGE › Tool Library**, then **Import...**, and choose a
-   tool library exported from Fusion (`.json`), or click **New...** and add tools by hand. See
-   [Tool libraries](tool-libraries.md).
-3. **Add a setup.** Click **SETUP › New Setup**. Pick your **Machine**, check that **Bodies** lists
-   your part, leave **Stock** on **Box** with a little extra on the **Sides** and **Top**, and pick
-   the work zero **Point** (for example the top front left corner of the stock). Click **OK**.
-4. **Face the top.** Click **MILL 2D › Facing**. Choose a **Tool** (a face mill or large end
-   mill). The toolpath appears as you go. Click **OK**.
-5. **Cut the outline.** Click **MILL 2D › Contour**. Choose a tool, click the **Outline** field and
-   then the part's bottom face (or its top face) in the view. Leave **Side** on **Outside**. Add
-   **Tabs** if the part is held from below. Click **OK**.
-6. **Look at the result.** With **ACTIONS › Show Stock** on, the stock shows what's left after the
-   operations. Select an operation in the browser to see the stock before it, with what it removes
-   in teal.
-7. **Post.** Click **ACTIONS › Post**. Read the issues list, turn on **Show Backplot** to see the
-   program drawn back from the G-code, then click **Save...**.
+### 1. Switch to CAM
+
+In the top bar, click **CAM** (next to **DESIGN**). The toolbar changes to **SETUP**, **MILL 2D**,
+**ACTIONS** and **MANAGE**.
+
+![The CAM workspace](../assets/images/cam-first-workspace.png)
+
+### 2. Import your tools
+
+You do this once. Click **MANAGE › Tool Library**, then **Import...**, and choose a tool library
+exported from Fusion (`.json`). The tools and their cutting presets appear; click **Close**.
+
+![An imported tool library](../assets/images/cam-first-tools.png)
+
+No Fusion library? Click **New...** and add tools by hand instead. See
+[Tool libraries](tool-libraries.md).
+
+### 3. Add a setup
+
+1. Click **SETUP › New Setup**. **Bodies** already lists the plate, and the violet box around it is
+   the stock.
+2. Choose **Machine: Tormach PCNC 770**.
+3. Leave **Stock** on **Box**: 0.05 in extra on the **Sides** and **Top**.
+4. Leave the work zero **Point** on **Top front left**: the top front left corner of the stock,
+   where you'll touch off.
+5. Click **OK**.
+
+![The setup card](../assets/images/cam-first-setup.png)
+
+**Starting range** 0 means the program stops at the start and says which belt to use. Set it to
+the range your 770 is already in to skip that stop.
+
+### 4. Face the top
+
+1. Click **MILL 2D › Facing**.
+2. Choose the **Tool**: a face mill (here, T45, a 2" face mill). The spiral toolpath appears.
+3. Click **OK**.
+
+![Facing](../assets/images/cam-first-facing.png)
+
+### 5. Cut the outline
+
+1. Click **MILL 2D › Contour**.
+2. Choose the **Tool**: an end mill (here, T4, a 3/8" end mill).
+3. Click the **Outline** field, then the plate's top face in the view. The path goes around its
+   outside edge.
+4. Leave **Side** on **Outside**, and set **Tabs** to `4` so the plate stays attached to the stock.
+5. Click **OK**.
+
+![Contour with four tabs](../assets/images/cam-first-contour.png)
+
+### 6. Look at the result
+
+With **ACTIONS › Show Stock** on (it is by default), the stock shows what's left after both
+operations: the top faced, the outline cut, the tabs holding the plate.
+
+![The stock after both operations](../assets/images/cam-first-stock.png)
+
+Click **Contour1** in the browser to see the stock **before** the contour, with what it removes in
+teal.
+
+![The stock before the contour](../assets/images/cam-first-before.png)
+
+### 7. Post
+
+1. Click **ACTIONS › Post**. The Post window shows the program and, above it, any errors or
+   warnings. This one is ready to save.
+
+    ![The Post window](../assets/images/cam-first-post.png)
+
+2. Tick **Show Backplot** to see the program drawn in the view as the machine will read it.
+
+    ![The backplot](../assets/images/cam-first-backplot.png)
+
+3. Click **Save...**. The file is named after the setup, with PathPilot's `.nc` extension.
 
 !!! warning "Always prove a program out"
     InvictusCAD checks feeds, spindle speeds, rapids through the stock and travel limits, but it
