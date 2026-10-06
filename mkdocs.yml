@@ -60,27 +60,48 @@ nav:
   - Getting Started:
       - Install InvictusCAD: getting-started/install.md
       - Free Trial and Activation: getting-started/trial-and-activation.md
+      - Your First Part: getting-started/first-part.md
+      - The InvictusCAD Window: getting-started/window.md
+      - Navigating and Selecting: getting-started/navigating.md
+      - Files, Autosave and Backups: getting-started/files.md
       - Units and Expressions: getting-started/units-and-expressions.md
+      - Keyboard Shortcuts: getting-started/shortcuts.md
   - Sketching:
-      - Sketches and Constraints: sketching/sketches-and-constraints.md
-      - Text in Sketches: sketching/text.md
-      - Importing 2D Drawings: sketching/import.md
+      - Sketch Basics: sketching/index.md
+      - Drawing: sketching/drawing.md
+      - Constraints and Dimensions: sketching/constraints.md
+      - Editing Sketches: sketching/editing.md
+      - Text: sketching/text.md
+      - Import and Export Drawings: sketching/import-export.md
       - Footprints: sketching/footprints.md
   - Modeling:
-      - Features: modeling/features.md
-      - Named Parameters: modeling/parameters.md
+      - Extrude: modeling/extrude.md
+      - Revolve, Sweep and Loft: modeling/revolve-sweep-loft.md
+      - Fillet, Chamfer and Shell: modeling/fillet-chamfer-shell.md
       - Holes and Threads: modeling/holes-and-threads.md
       - Patterns and Mirror: modeling/patterns-and-mirror.md
       - Reference Planes: modeling/reference-planes.md
+      - Named Parameters: modeling/parameters.md
+      - Editing Your Model: modeling/history.md
+      - Measure: modeling/measure.md
   - Assemblies:
-      - Components and Connections: assemblies/components.md
+      - Components and Instances: assemblies/components.md
+      - Connections: assemblies/connections.md
   - Making Parts:
-      - Flat Parts and Nesting: making/flat-parts-and-nesting.md
-      - CAM: making/cam.md
+      - Flat Parts: making/flat-parts.md
+      - Nest Parts on Sheets: making/nesting.md
+  - CAM:
+      - From Model to G-code: cam/index.md
+      - Machines: cam/machines.md
+      - Tool Libraries: cam/tool-libraries.md
+      - Setups: cam/setups.md
+      - Operations: cam/operations.md
+      - Check and Post: cam/post.md
   - AI and Automation:
       - Drive InvictusCAD from Claude (MCP): automation/mcp.md
   - Your License:
       - How Licensing Works: license/how-licensing-works.md
+      - Read-Only Mode: license/read-only.md
       - Move to Another Computer: license/move-computers.md
       - Renew Updates: license/renew.md
   - Help:

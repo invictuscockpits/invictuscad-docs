@@ -13,8 +13,11 @@
 2. Run it and follow the prompts.
 3. Start InvictusCAD from the Start menu.
 
-The first time it starts, InvictusCAD asks you to **Start free trial** or **Enter license key**.
-See [Free trial and activation](trial-and-activation.md).
+The first time it starts, InvictusCAD starts your 30-day free trial by itself. If you've already
+bought a license, enter the key in **☰ › Help › License**. See
+[Free trial and activation](trial-and-activation.md).
+
+Next: [Your first part](first-part.md).
 
 ## Updating
 
@@ -22,8 +25,8 @@ Install a newer version over the old one; your settings and files are kept. Your
 version released while your updates are current. See
 [How licensing works](../license/how-licensing-works.md).
 
-## Autosave and recovery
+## Uninstalling
 
-InvictusCAD autosaves your work about a minute after each change. If it closes unexpectedly, it
-offers to restore your work the next time it starts. Each time you save, the last 10 versions of
-the file are kept as backups.
+Uninstall from Windows **Settings › Apps**. Your projects, and your settings, libraries and backups
+in `%LOCALAPPDATA%\InvictusCAD`, are left in place. To move your license to another computer
+first, see [Move to another computer](../license/move-computers.md).

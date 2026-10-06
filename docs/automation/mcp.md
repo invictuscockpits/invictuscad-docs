@@ -1,32 +1,25 @@
 # Drive InvictusCAD from Claude (MCP)
 
 InvictusCAD includes a [Model Context Protocol](https://modelcontextprotocol.io) server, so an AI
-assistant such as Claude Desktop, Claude Code or Cursor can model for you: create sketches, draw and
-constrain geometry, extrude, measure and save.
+assistant such as Claude Desktop, Claude Code or Cursor can model for you: sketch and constrain,
+extrude, add holes and fillets, measure, export flat parts, set up CAM and post programs.
 
-The assistant launches `invictuscad-mcp.exe`, installed next to `invictuscad.exe`, which works in
-one of two modes:
+The assistant works **in your open window**: you watch each change happen, it shows in the
+Command Log, and **Undo** takes back the assistant's steps like your own. Each request it makes is
+one undo step.
 
-- **Live.** If InvictusCAD is open, the assistant works in your window and you see each change.
-  Every tool call is one step in Edit > Undo, and each appears in the Command Log. It can also take
-  screenshots of the 3D view and change the view.
-- **Headless.** If InvictusCAD isn't open, the server keeps its own document and opens or saves
-  `.ivc` files.
+## Set it up
 
-The mode is chosen when the assistant starts the server. If you open InvictusCAD afterwards, restart
-the MCP server in the assistant, or use `--launch-app` (below).
-
-## Set up your assistant
-
-The paths below assume the default install folder, `C:\Program Files\InvictusCAD`.
+The assistant runs `invictuscad-mcp.exe`, which is installed next to `invictuscad.exe`. The paths
+below assume the default install folder, `C:\Program Files\InvictusCAD`.
 
 **Claude Code:**
 
 ```bash
-claude mcp add invictuscad -- "C:\Program Files\InvictusCAD\invictuscad-mcp.exe"
+claude mcp add invictuscad -- "C:\Program Files\InvictusCAD\invictuscad-mcp.exe" --launch-app
 ```
 
-**Claude Desktop:** go to Settings > Developer > Edit Config, add this to
+**Claude Desktop:** go to **Settings › Developer › Edit Config**, add this to
 `claude_desktop_config.json`, and restart Claude Desktop:
 
 ```json
@@ -42,29 +35,42 @@ claude mcp add invictuscad -- "C:\Program Files\InvictusCAD\invictuscad-mcp.exe"
 
 **Cursor:** add the same `mcpServers` entry to `%USERPROFILE%\.cursor\mcp.json`.
 
-### Options
+## Modes
 
-| Argument | Effect |
+| Argument | |
 |---|---|
-| (none) | Live if the app is open, otherwise headless |
-| `--launch-app` | Starts InvictusCAD if it isn't open, then works live |
-| `--headless` | Never touches the app |
+| (none) | Works in the open InvictusCAD window. If it isn't open, the assistant is told to open it; the next request finds it, with nothing to restart |
+| `--launch-app` | The same, but starts InvictusCAD when it isn't open |
+| `--headless` | Never touches the app: the server keeps its own document, for scripts and batch jobs |
 
-| Environment variable | Effect |
-|---|---|
-| `INVICTUSCAD_MCP=0` | Stops the app from listening for assistants |
-
-## What it can do
-
-Every command in InvictusCAD is available as a tool, plus tools to read the model (`get_document`,
-`get_sketch`, `get_body`), `measure`, the footprint library, `rename_object`, `undo` and `redo`,
-and opening and saving projects.
-
-Lengths are millimeters unless given with units (`"0.5in"`, `"1/4\""`, `"10 + 2mm"`). If a request
-doesn't work, such as a conflicting constraint or a profile that isn't closed, the assistant gets
-an error and your model is left unchanged.
+Set the environment variable `INVICTUSCAD_MCP=0` to stop InvictusCAD listening for assistants.
 
 ## Try it
 
-> Make a 4 x 2 inch plate, 1/4 inch thick, with a 10 mm hole 15 mm in from each corner, fully
+> Make a 4 × 2 inch plate, 1/4 inch thick, with a 10 mm hole 15 mm in from each corner, fully
 > constrained.
+
+> Round the vertical edges 1/8 inch, then export it flat as DXF to my desktop.
+
+> Set up the plate on the Tormach 770 with the zero at the top front left corner of the stock, face
+> it with tool 1, contour the outside with tool 4 and four tabs, and post it.
+
+## What the assistant can do
+
+Every command in InvictusCAD is available to it, plus:
+
+| | Tools |
+|---|---|
+| Look at the model | `get_document`, `get_sketch`, `get_body`, `measure`, `screenshot`, `set_view` |
+| Files | `new_document`, `open_project`, `save_project` |
+| History | `undo`, `redo` |
+| 2D output | `export_sketch`, `export_flat`, `nest_parts` (with a quantity per part) |
+| Footprints | `list_footprints`, `save_footprint`, `delete_footprint` |
+| CAM | `add_setup`, `add_operation`, `post_setup`, `get_operation`, `list_tools`, `import_tool_library`, `list_machines` |
+
+Lengths are millimeters unless given with units (`"0.5in"`, `"1/4\""`, `"10 + 2mm"`). When a
+request can't be done, such as a conflicting constraint or an open profile, the assistant gets the
+reason and the model is left unchanged.
+
+The assistant won't throw away your unsaved work: opening or starting a project with unsaved
+changes is refused until you save or discard them.

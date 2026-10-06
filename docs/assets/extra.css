@@ -14,3 +14,9 @@
 [data-md-color-scheme="default"] {
   --md-typeset-a-color: #048a32;
 }
+
+/* Screenshots of the (dark) app: a frame so they read as pictures on either theme. */
+.md-typeset img {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 6px;
+}
