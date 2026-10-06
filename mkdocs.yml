@@ -1,0 +1,88 @@
+site_name: InvictusCAD Documentation
+site_url: https://docs.invictuscad.com
+repo_url: https://github.com/invictuscockpits/invictuscad-docs
+repo_name: invictuscockpits/invictuscad-docs
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  logo: assets/logo.svg
+  favicon: assets/favicon.svg
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.action.edit
+
+extra_css:
+  - assets/extra.css
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.keys
+  - toc:
+      permalink: true
+
+extra:
+  social:
+    - icon: fontawesome/solid/globe
+      link: https://invictuscad.com
+    - icon: fontawesome/solid/envelope
+      link: mailto:support@invictuscad.com
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Install InvictusCAD: getting-started/install.md
+      - Free Trial and Activation: getting-started/trial-and-activation.md
+      - Units and Expressions: getting-started/units-and-expressions.md
+  - Sketching:
+      - Sketches and Constraints: sketching/sketches-and-constraints.md
+      - Text in Sketches: sketching/text.md
+      - Importing 2D Drawings: sketching/import.md
+      - Footprints: sketching/footprints.md
+  - Modeling:
+      - Features: modeling/features.md
+      - Named Parameters: modeling/parameters.md
+      - Holes and Threads: modeling/holes-and-threads.md
+      - Patterns and Mirror: modeling/patterns-and-mirror.md
+      - Reference Planes: modeling/reference-planes.md
+  - Assemblies:
+      - Components and Connections: assemblies/components.md
+  - Making Parts:
+      - Flat Parts and Nesting: making/flat-parts-and-nesting.md
+      - CAM: making/cam.md
+  - AI and Automation:
+      - Drive InvictusCAD from Claude (MCP): automation/mcp.md
+  - Your License:
+      - How Licensing Works: license/how-licensing-works.md
+      - Move to Another Computer: license/move-computers.md
+      - Renew Updates: license/renew.md
+  - Help:
+      - FAQ: help/faq.md
+      - Get Support: help/support.md
