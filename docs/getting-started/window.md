@@ -1,6 +1,6 @@
 # The InvictusCAD Window
 
-![The InvictusCAD window](../assets/images/first-part-extruded.png)
+![The InvictusCAD window](../assets/images/first-part-result.png)
 
 ## Top bar
 
