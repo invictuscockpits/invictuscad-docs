@@ -8,6 +8,7 @@
 | **Physical material** | What bodies in a new document are made of until you give them a material: their mass, their look and, for sheet metal, their K-factor and relief size. It's saved with the document |
 | **Sizes to start on** | Which hole and thread sizes the Hole card starts on: **Metric**, **Inch**, or **The document's units**. The card's **Standard** switch changes it for one hole |
 | **Thickness**, **Bend radius** | The sheet a new sheet metal Flange starts at. Bend radius 0 uses the thickness |
+| **SpaceMouse** | **Speed**, and **Reverse panning**, **zooming** or **turning** for a 3Dconnexion SpaceMouse |
 
 Preferences apply to documents you start afterwards. An empty, untouched document also takes them
 straight away.
