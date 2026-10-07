@@ -9,6 +9,7 @@ you press ++esc++ or click its button again, so you can draw several shapes in a
 |---|---|---|
 | **Line** | ++l++ | Click the start, then each next point. Segments chain. Click the first point to close the loop, or click the last point again (or double-click) to stop |
 | **Rectangle** | ++r++ | Click two opposite corners. Makes four lines, joined and held square |
+| **Center Rectangle** | ++shift+r++ | Click the center, then a corner. Construction diagonals and a center point hold it centered |
 | **Circle** | ++c++ | Click the center, then a point on the circle |
 | **Arc** (3-point) | ++a++ | Click the start, the end, then a point the arc passes through |
 | **Center Arc** | ++shift+a++ | Click the center, then the start (this sets the radius), then move around to the end and click. It can sweep either way, past 180° |
@@ -19,6 +20,9 @@ you press ++esc++ or click its button again, so you can draw several shapes in a
 | **Text** | | Click where it goes; see [Text](text.md) |
 
 ![Sketch tools](../assets/images/sketch-tools.png)
+
+Rectangle and Center Rectangle share one toolbar button. It shows the one you used last; the small
+arrow at its corner offers both.
 
 ## Type exact sizes while drawing
 

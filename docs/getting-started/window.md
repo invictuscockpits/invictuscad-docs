@@ -18,6 +18,7 @@ From left to right:
 | **SELECT** | Which things clicks pick: faces, edges and vertices. Turn one off to make the others easier to click |
 | **🔍 Search** | Find any tool by name (++ctrl+k++) |
 | **Fit** | Fit the model in the view (++f++ or ++home++) |
+| **Origin** | Show the X, Y and Z axes through the origin, dimmed (also **View › Origin**) |
 | **Browser**, **Command Log** | Show or hide them (++ctrl+b++, ++ctrl+l++) |
 
 ### Tool panels
