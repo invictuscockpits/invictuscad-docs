@@ -74,6 +74,7 @@ nav:
       - Text: sketching/text.md
       - Import and Export Drawings: sketching/import-export.md
       - Footprints: sketching/footprints.md
+      - Canvases: sketching/canvases.md
   - Modeling:
       - Extrude: modeling/extrude.md
       - Revolve, Sweep and Loft: modeling/revolve-sweep-loft.md
@@ -83,6 +84,7 @@ nav:
       - Reference Planes: modeling/reference-planes.md
       - Named Parameters: modeling/parameters.md
       - Editing Your Model: modeling/history.md
+      - Materials and Appearances: modeling/materials-and-appearances.md
       - Measure: modeling/measure.md
   - Assemblies:
       - Components and Instances: assemblies/components.md
