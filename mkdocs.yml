@@ -85,6 +85,7 @@ nav:
       - Named Parameters: modeling/parameters.md
       - Editing Your Model: modeling/history.md
       - Materials and Appearances: modeling/materials-and-appearances.md
+      - Sheet Metal: modeling/sheet-metal.md
       - Measure: modeling/measure.md
   - Assemblies:
       - Components and Instances: assemblies/components.md

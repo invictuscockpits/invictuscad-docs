@@ -12,6 +12,7 @@ From left to right:
 | **Document name** | A **•** after it means there are unsaved changes. Hover it for the file's full path |
 | **Undo / Redo** | ++ctrl+z++ / ++ctrl+y++. Hover them to see which step they'd undo or redo |
 | **DESIGN / CAM** | Switch between modeling and the [CAM workspace](../cam/index.md) |
+| **SOLID / SHEET METAL** | Which tools show in Design: solid modeling or [sheet metal](../modeling/sheet-metal.md) |
 | **Tool panels** | **CREATE**, **MODIFY**, **ASSEMBLE**, **MAKE**, **INSPECT**. In a sketch these change to the sketch tools |
 | **Unit** (**mm ▾**) | The document's display unit: millimeters, centimeters, meters, inches or feet |
 | **SELECT** | Which things clicks pick: faces, edges and vertices. Turn one off to make the others easier to click |
