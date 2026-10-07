@@ -8,7 +8,7 @@ From left to right:
 
 | | |
 |---|---|
-| **☰ Menu** | **File** (New, Open, Save, Save As, Show Backups Folder), **Edit** (Undo, Redo, Delete, Clear Selection), **Create**, **View** (Fit, Front, Top, Right, Isometric, Browser, Command Log) and **Help** (License, Capture Window, Open Crash Reports Folder) |
+| **☰ Menu** | **File** (New, Open, Save, Save As, Show Backups Folder), **Edit** (Undo, Redo, Delete, Clear Selection, [Preferences](preferences.md)), **Create**, **View** (Fit, Front, Top, Right, Isometric, Browser, Command Log) and **Help** (License, Capture Window, Open Crash Reports Folder) |
 | **Document name** | A **•** after it means there are unsaved changes. Hover it for the file's full path |
 | **Undo / Redo** | ++ctrl+z++ / ++ctrl+y++. Hover them to see which step they'd undo or redo |
 | **DESIGN / CAM** | Switch between modeling and the [CAM workspace](../cam/index.md) |

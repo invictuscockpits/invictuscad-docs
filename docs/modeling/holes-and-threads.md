@@ -10,7 +10,8 @@
     | Field | |
     |---|---|
     | **Type** | **Simple**, **Counterbore** or **Countersink** |
-    | **Size** | A standard size (ISO metric M1–M64 and fine pitches, UNC #1–2", UNF #0–1-1/2") or **Custom diameter** |
+    | **Standard** | **Metric** or **Inch** sizes, in any document. It starts on the document's units, or on the one chosen in [Preferences](../getting-started/preferences.md) |
+    | **Size** | A standard size (ISO metric M1–M64 and fine pitches, or UNC #1–2" and UNF #0–1-1/2") or **Custom diameter** |
     | **Fit** | For standard sizes: **Tapped** (tap drill size), **Close**, **Normal** or **Loose** clearance |
     | **Diameter** | For a custom size |
     | **Extent** | **Through**, or **Blind** with a **Depth** (drag the arrow, or type) |
