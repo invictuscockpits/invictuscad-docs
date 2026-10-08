@@ -33,7 +33,7 @@ tick which tools are pinned. In a narrow window, panels that don't fit move unde
 | MODIFY | Fillet, Chamfer, Shell, Rectangular Pattern, Circular Pattern, Path Pattern, Mirror Features, Delete, Parameters |
 | ASSEMBLE | Make Component, Connect, Move Instance, Update Links |
 | MAKE | Export Flat, Nest Parts |
-| INSPECT | Measure |
+| INSPECT | Measure, Section Analysis |
 
 ## Browser
 

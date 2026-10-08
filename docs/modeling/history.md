@@ -26,12 +26,18 @@ one go.
 
 ## Delete
 
-Select bodies, sketches or planes in the browser (or click a body in the view) and press
-++delete++, or choose **MODIFY › Delete**. A body takes its features with it. Something still used
-by another feature can't be deleted; the message says what uses it.
+Select what to delete in the browser (or click a body in the view) and press ++delete++, choose
+**MODIFY › Delete**, or right-click it in the browser and choose **Delete**. You can delete bodies,
+features, sketches, planes, components, instances, connections and section analyses.
 
-!!! note
-    Single features can't be deleted yet. Undo them, or delete the body.
+- A body takes its features with it.
+- A feature leaves its body, which rebuilds without it. Deleting the feature that made a body
+  deletes the body too.
+- A component takes its instances with it, and an instance its connections.
+- If other things use what you're deleting, such as a sketch on a body's face, InvictusCAD names
+  them and asks. **Delete All** deletes them too; **Cancel** keeps everything.
+
+Deleting several things at once is one step to undo.
 
 ## Box
 

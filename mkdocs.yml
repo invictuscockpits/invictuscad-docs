@@ -87,7 +87,9 @@ nav:
       - Editing Your Model: modeling/history.md
       - Materials and Appearances: modeling/materials-and-appearances.md
       - Sheet Metal: modeling/sheet-metal.md
+      - Bring In 3D Models: modeling/import-models.md
       - Measure: modeling/measure.md
+      - Section Analysis: modeling/section-analysis.md
   - Assemblies:
       - Components and Instances: assemblies/components.md
       - Connections: assemblies/connections.md
