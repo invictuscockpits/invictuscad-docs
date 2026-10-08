@@ -28,7 +28,7 @@
     | **Fit** | For standard sizes: **Tapped** (tap drill size), **Close**, **Normal** or **Loose** clearance |
     | **Diameter** | For a custom size |
     | **Extent** | **Through**, or **Blind** with a **Depth** (drag the arrow, or type) |
-    | **Thread** | For tapped holes: **Cosmetic** (drawn, not modeled) or **Modeled** |
+    | **Thread** | For tapped holes: **Cosmetic** (drawn, not modeled) or **Modeled**. A modeled thread has the standard's profile (60° flanks with flats at the crests and roots), and the hole is drilled to the thread's minor diameter rather than the tap drill. In a blind hole it stops half a turn short of the bottom |
 
 5. Click **OK**.
 
