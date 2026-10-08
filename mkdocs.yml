@@ -82,6 +82,7 @@ nav:
       - Fillet, Chamfer and Shell: modeling/fillet-chamfer-shell.md
       - Holes and Threads: modeling/holes-and-threads.md
       - Patterns and Mirror: modeling/patterns-and-mirror.md
+      - Combine and Split Bodies: modeling/combine-and-split.md
       - Reference Planes: modeling/reference-planes.md
       - Named Parameters: modeling/parameters.md
       - Editing Your Model: modeling/history.md

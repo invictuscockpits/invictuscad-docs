@@ -30,7 +30,7 @@ tick which tools are pinned. In a narrow window, panels that don't fit move unde
 | Panel | Tools |
 |---|---|
 | CREATE | Sketch, Extrude, Revolve, Hole, Sweep, Loft, Thread, Box, Reference Plane |
-| MODIFY | Fillet, Chamfer, Shell, Rectangular Pattern, Circular Pattern, Path Pattern, Mirror Features, Delete, Parameters |
+| MODIFY | Fillet, Chamfer, Shell, Combine, Split Body, Mirror, Rectangular Pattern, Circular Pattern, Path Pattern, Delete, Parameters |
 | ASSEMBLE | Make Component, Connect, Move Instance, Update Links |
 | MAKE | Export Flat, Nest Parts |
 | INSPECT | Measure, Section Analysis |

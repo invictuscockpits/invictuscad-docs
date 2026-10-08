@@ -22,15 +22,20 @@ To repeat geometry inside a sketch instead, see [sketch patterns](../sketching/e
 
 ## Mirror
 
-1. Choose **MODIFY › Mirror Features**.
-2. Pick the **Features** (or nothing, for the whole body).
+1. Choose **MODIFY › Mirror**.
+2. Choose what to mirror:
+    - **Features:** click a face of each feature to copy. The copies join the same body, mirrored.
+    - **Bodies:** pick bodies. Each gets a mirrored copy as a body of its own.
+    - **Components:** click placed components. Each gets an opposite-hand copy as a new component,
+      named after the original with "Mirror" added. Use it for left- and right-hand parts.
 3. Pick the **Plane**: XY, XZ, YZ, a [reference plane](reference-planes.md), or a flat face.
 4. Click **OK**.
 
-!!! tip
-    Model half of a symmetric part and mirror it. Changes to the half you modeled show up on both
-    sides.
+Mirrored bodies and components follow their originals: change the original and the copy changes
+with it.
 
-If InvictusCAD can't tell which body to change, set the **Body** field at the bottom of the card.
+!!! tip
+    Model half of a symmetric part and mirror its features. Changes to the half you modeled show up
+    on both sides.
 
 Double-click a pattern or mirror in the browser to change it.
