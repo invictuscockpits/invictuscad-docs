@@ -12,6 +12,32 @@ Change any of them and the model rebuilds from that point on.
 Later features keep working because faces and edges are named after the features that made them.
 A fillet stays on "the edge between Extrude1's end and its side" even when Extrude1 gets longer.
 
+## The History panel
+
+The **History** panel down the right of the view, under the view cube, lists every step of the
+design in the order it was made: sketches, reference planes and features. Collapsed, it shows
+each step's icon (hover for its name); click the button at its bottom to expand it and see the
+names too. Your choice is remembered.
+
+- **Edit a step:** double-click it.
+- **Roll back:** drag the green marker up the list. Steps below it dim and are left out of the
+  model, as if not made yet, and anything you make now goes in at the marker. Drag it back down
+  (or right-click a step and choose **Build Everything**) to build the rest again. Right-click a
+  step and choose **Build Up to Here** to put the marker just below it.
+- **Suppress:** right-click a feature and choose **Suppress** to leave it out without deleting
+  it. Suppressed steps are struck through; choose **Unsuppress** to bring one back.
+- **Reorder:** drag a step to another place. A step can't go above something it uses (an
+  extrude above its sketch, for example); InvictusCAD says why and leaves it where it was.
+- **Delete:** right-click a step and choose **Delete**.
+
+The marker's place and suppressed steps are saved with the project.
+
+### How was this made?
+
+Click a face, edge or vertex in the view. The History panel lights up the steps that made it in
+green (the sketch and the feature that created it) and the steps that changed it afterwards in
+blue (a fillet that rounded its edge, a cut through it). Double-click one to edit it.
+
 ## When something no longer builds
 
 If a change makes a later feature impossible, such as a fillet too big for a shortened edge, that
