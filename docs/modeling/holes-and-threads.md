@@ -3,8 +3,8 @@
 ## Add holes
 
 1. Choose **CREATE › Hole** (++h++).
-2. Choose **Holes**: **Single** for one hole, or **Multiple** to place several in one go.
-3. Click a flat face where the hole goes. Near the cursor the hole snaps to:
+2. Click a flat face where the hole goes (the card starts on **Place**). Near the cursor the hole
+   snaps to:
     - a **Corner** of the part;
     - the **Center** of a round edge or arc (a boss, another hole), or of a circle in a sketch;
     - an edge's **Midpoint**;
@@ -14,9 +14,10 @@
     A green ring shows where it will go and a label says what it snapped to. Away from all of
     these, it goes where you click.
 
-    With **Single**, clicking again moves the hole; with **Multiple**, each click adds one. Drag a
-    hole's dot to move it (it snaps the same way). All the holes in one Hole feature go on the same
-    face, or faces in the same plane.
+    Each click adds another hole. All the holes in one Hole feature go on the same face, or faces in
+    the same plane.
+3. To move a hole, choose **Move** (once there's a hole) and drag its dot. The hole follows as you
+   drag and snaps the same way; clicks in **Move** don't add holes. Choose **Place** to add more.
 4. Set the card:
 
     | Field | |
