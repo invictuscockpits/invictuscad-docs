@@ -1,4 +1,4 @@
-# Fit and Align
+# Extract and Align
 
 Scans come in wherever the scanner put them, and they are only triangles. Fitting finds the real
 shapes in them: planes, cylinders, cones and spheres. Aligning uses those shapes to put the scan
@@ -18,54 +18,54 @@ freeform in grey.
 | **Sensitivity** | 0–100. Higher finds smaller regions and tells close shapes apart (a large fillet from the face next to it). Lower makes fewer, larger regions on a noisy scan |
 
 The message after it says how many of each it found. Regions show you the part's make-up at a
-glance, and fits made on a region use exactly its triangles (see below). **REGIONS › Show
+glance, and shapes extracted on a region use exactly its triangles (see below). **REGIONS › Show
 Regions** turns the colors off and on.
 
-## Fit a shape
+## Extract a shape
 
-**FIT › Fit Plane**, **Fit Cylinder**, **Fit Cone** or **Fit Sphere** opens the Fit card. Click
-the scan on the surface you want. The fit grows from where you click over all of the surface that
+**EXTRACT › Extract Plane**, **Extract Cylinder**, **Extract Cone** or **Extract Sphere** opens the Extract card. Click
+the scan on the surface you want. The shape grows from where you click over all of the surface that
 matches the shape, and that area lights up orange. The card shows the result as you go, for
 example *Cylinder Ø 12.004 mm, 0.006 mm RMS, 2,310 triangles*. Change **Shape** on the card to
 try another kind on the same spot.
 
-![Fitting a plane: the top face it takes lit orange, the result on the card](../assets/images/scan-fit.png)
+![Extracting a plane: the top face it takes lit orange, the result on the card](../assets/images/scan-fit.png)
 
 | Value | What it does |
 |---|---|
 | **Shape** | Plane, cylinder, cone or sphere |
-| **On** | The spot on the scan the fit grows from |
+| **On** | The spot on the scan the shape grows from |
 | **Tolerance** (Options) | How far the surface may stray from the shape. **0** works it out from the scan's own noise, which is usually right |
 | **Angle** (Options) | How far the surface may turn away from the shape before it stops growing (default 20°) |
 
-If the scan has regions and you click inside a region of the same kind, the fit uses that whole
+If the scan has regions and you click inside a region of the same kind, it uses that whole
 region. Hovering the scan tells you which kind of region is under the cursor.
 
 For a surface in pieces, such as a bore cut through by a slot or a face split by a groove, click
-each piece. The fit grows from every spot you click and fits one shape to them all. Click a spot
+each piece. It grows from every spot you click and fits one shape to them all. Click a spot
 again to take it out.
 
-Click **Fit**. The fit goes into the **Scans** folder (*Plane1*, *Cylinder1*...) and is drawn in
-amber-gold. Fits are reference geometry, like [reference planes](../modeling/reference-planes.md):
+Click **Extract**. The shape goes into the **Scans** folder (*Plane1*, *Cylinder1*...) and is drawn in
+amber-gold. Extracted shapes are reference geometry, like [reference planes](../modeling/reference-planes.md):
 
-- A **fitted plane** works anywhere a plane does. Start a sketch on it, cut a
+- An **extracted plane** works anywhere a plane does. Start a sketch on it, cut a
   [section](model-and-compare.md#section-sketch) along it, or use it to extrude to or mirror
-  across. A sketch on a fitted plane moves with it when the scan is aligned.
-- A **fitted cylinder or cone** works as an axis: revolve about it, pattern around it, align to it.
-- A **fitted sphere** works as a point: its center.
+  across. A sketch on an extracted plane moves with it when the scan is aligned.
+- An **extracted cylinder or cone** works as an axis: revolve about it, pattern around it, align to it.
+- An **extracted sphere** works as a point: its center.
 
-Fits belong to their scan. When you align or move the scan, its fits move with it.
+Extracted shapes belong to their scan. When you align or move the scan, they move with it.
 
 ## Align the scan
 
-**ALIGN › Align** moves the scan onto the model's axes using its own features, usually fits:
+**ALIGN › Align** moves the scan onto the model's axes using its own features, usually extracted shapes:
 
 | Value | What it does |
 |---|---|
 | **Primary** | The main feature: a plane (the bottom face, say) or an axis (the main bore) |
 | **Onto** | Where it goes: the XY, XZ or YZ plane, or the X, Y or Z axis |
 | **Flip** | Turns the scan over, if it lands upside down |
-| **Rest on plane** | Then moves the scan along the primary's direction until its lowest point touches that plane. Use it when the face the part stood on wasn't scanned: fit the top, align it onto XY, and rest the scan on XY |
+| **Rest on plane** | Then moves the scan along the primary's direction until its lowest point touches that plane. Use it when the face the part stood on wasn't scanned: extract the top, align it onto XY, and rest the scan on XY |
 | **Secondary** (optional) | A second plane or axis that sets which way the scan turns about the primary: a side face or a second bore |
 | **Onto** | The axis the secondary turns onto: X, Y or Z |
 | **Flip** | The secondary the other way round |
@@ -75,7 +75,7 @@ While the card is open, the scan is shown where it will go. Planes and axes also
 position: a plane passes through the origin, an axis runs along an origin axis. Where they
 disagree, **Origin** wins, then **Primary**, then **Secondary**.
 
-For example, on a block with a bored boss: fit the bottom, the front face and the boss. Then
+For example, on a block with a bored boss: extract the bottom, the front face and the boss. Then
 align with **Primary** the bottom onto **XY**, **Secondary** the front onto **Y**, and **Origin**
 the boss's cylinder. The bottom then lies on XY, the front faces along Y, and the boss's axis
 runs up Z through the origin.

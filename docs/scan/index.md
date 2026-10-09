@@ -1,7 +1,7 @@
 # Scan to CAD
 
 The **Scan to CAD** workspace turns a 3D scan of a real part into a model you can edit. You bring
-in the scan, clean it up, and fit planes, cylinders and other shapes to it. Then you line it up
+in the scan, clean it up, and extract planes, cylinders and other shapes from it. Then you line it up
 with the model's axes, cut sections through it into sketches, and model over it with the usual
 tools. At the end you can check the model against the scan, point by point.
 
@@ -12,7 +12,7 @@ workspace's own panels:
 |---|---|
 | MESH | Import Scan, Clean Up, Fill Holes, Smooth, Reduce, Mesh Points, Fix Normals, Flip Normals, Convert to Body, Export Scan |
 | REGIONS | Auto Regions, Show Regions |
-| FIT | Fit Plane, Fit Cylinder, Fit Cone, Fit Sphere |
+| EXTRACT | Extract Plane, Extract Cylinder, Extract Cone, Extract Sphere |
 | ALIGN | Align, Move Scan |
 | MODEL | Section Sketch, Outline Sketch, then Design's Sketch, Extrude, Revolve, Sweep, Loft, Reference Plane, Fillet, Chamfer, Combine and Hole |
 | INSPECT | Deviation, Measure, Section Analysis |
@@ -23,10 +23,10 @@ A typical scan becomes a model like this:
 
 1. **Bring the scan in** and **clean it up**: remove loose bits, fill holes and smooth out noise
    (this page).
-2. **Find its regions**, so you can see which areas are flat, round or freeform, and **fit**
-   planes and axes to the important ones ([Fit and Align](fit-and-align.md)).
-3. **Align** the scan to the model's axes using those fits, so the bottom sits on XY and the main
-   bore runs along Z ([Fit and Align](fit-and-align.md)).
+2. **Find its regions**, so you can see which areas are flat, round or freeform, and **extract**
+   planes and axes to the important ones ([Extract and Align](extract-and-align.md)).
+3. **Align** the scan to the model's axes using those shapes, so the bottom sits on XY and the main
+   bore runs along Z ([Extract and Align](extract-and-align.md)).
 4. **Cut sections** into sketches of lines and arcs, then dimension and constrain them and
    extrude or revolve them ([Model and Compare](model-and-compare.md)).
 5. **Compare** the model with the scan, and fix what's off ([Model and Compare](model-and-compare.md)).
@@ -50,7 +50,7 @@ The scan's numbers are taken as millimeters. A scanner that works in other units
 brought in through the [MCP command](../automation/mcp.md) `import_scan` with its `unit`.
 
 !!! tip "Point clouds"
-    A point cloud can be cleaned of stray points, thinned, aligned and compared as it is. Fits,
+    A point cloud can be cleaned of stray points, thinned, aligned and compared as it is. Extracting shapes,
     regions and sections need a mesh: **MESH › Mesh Points** makes one (see below).
 
 ## Clean it up
@@ -75,14 +75,14 @@ around meanwhile.
     **Fill Holes**, set **Largest hole** to **0** so every opening has a dot, and leave only the
     bottom's dot chosen. Then tick **Flat** and click **Fill**. The bottom is closed with one flat
     face, and any holes going through the part stay open through it. To sit the scan on the floor
-    when you align it, use [Rest on plane](fit-and-align.md#align-the-scan).
+    when you align it, use [Rest on plane](extract-and-align.md#align-the-scan).
 
-Clean-ups change the triangles, so a scan's [regions](fit-and-align.md#auto-regions) are cleared
-by them. Run Auto Regions again afterwards. Fits you already made stay.
+Clean-ups change the triangles, so a scan's [regions](extract-and-align.md#auto-regions) are cleared
+by them. Run Auto Regions again afterwards. Shapes you already extracted stay.
 
 ## Mesh a point cloud
 
-**MESH › Mesh Points** turns a point cloud into a triangle mesh, so you can fit shapes to it,
+**MESH › Mesh Points** turns a point cloud into a triangle mesh, so you can extract shapes from it,
 find its regions and cut sections through it. It works out which way the surface faces at each
 point from its neighbors, then traces the surface through the points. Where the scanner saw
 nothing, the mesh has holes, as a scan from a mesh would. **Fill Holes** closes them.

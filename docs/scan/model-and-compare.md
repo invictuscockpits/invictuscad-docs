@@ -13,14 +13,14 @@ is what a designer would have drawn.
 | Value | What it does |
 |---|---|
 | **Scan** | The scan to cut |
-| **Plane** | The plane to cut along: an origin plane, a [fitted plane](fit-and-align.md#fit-a-shape), a reference plane or a flat face |
+| **Plane** | The plane to cut along: an origin plane, a [extracted plane](extract-and-align.md#extract-a-shape), a reference plane or a flat face |
 | **Offset** | Moves the cut along the plane's normal. Drag the arrow, or type a value |
 | **Tolerance** (Options) | How closely the lines and arcs follow the cut. **0** works it out from the scan's noise |
 | **Arcs** (Options) | Fit arcs as well as lines. Off: lines only |
 | **Level lines** (Options) | Lines within a degree of level or upright are made exactly so, and constrained |
 
 The cut is drawn in blue over the scan while the card is open. A plane lying right along one of
-the scan's faces (a fitted plane at offset 0, or a cut at exactly the height of a step) would only
+the scan's faces (an extracted plane at offset 0, or a cut at exactly the height of a step) would only
 trace that face's noise, so the card says so and suggests a small offset to cut just above or
 below the face instead. Click **Sketch**. The new sketch
 opens for editing, with:
@@ -37,20 +37,20 @@ the Scan to CAD toolbar.
 
 ![A section sketch: the block's outline as four lines, the hole as a circle](../assets/images/scan-section-sketch.png)
 
-Sketches on a fitted plane follow it if the scan is aligned again later.
+Sketches on an extracted plane follow it if the scan is aligned again later.
 
 ## Outline Sketch
 
 **MODEL › Outline Sketch** sketches the scan's outline as seen straight along a plane's normal:
 its shadow on the plane. That gives the outer edge plus every hole that goes right through. Use
 it for flat parts: a plate, a gasket, a bracket blank, a laser-cut piece. Pick the plane (usually
-the fitted face the part lies on). The outline is fitted with lines and arcs like a section, with
+the extracted face the part lies on). The outline is fitted with lines and arcs like a section, with
 the same **Tolerance**, **Arcs** and **Level lines** options, and the sketch opens for editing.
 
 ## Build the model
 
 The **MODEL** panel has Design's own tools: [Extrude](../modeling/extrude.md),
-[Revolve](../modeling/revolve-sweep-loft.md) (about a fitted cylinder's axis, for example),
+[Revolve](../modeling/revolve-sweep-loft.md) (about an extracted cylinder's axis, for example),
 Sweep, Loft, [Reference Plane](../modeling/reference-planes.md), Fillet, Chamfer,
 [Combine](../modeling/combine-and-split.md) and [Hole](../modeling/holes-and-threads.md). The
 rest of Design is a click away in the sidebar. Bodies made here are ordinary bodies, with their
