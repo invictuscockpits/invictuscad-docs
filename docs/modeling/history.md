@@ -6,8 +6,8 @@ Every feature keeps what you gave it: its sketch, its values, the edges and face
 Change any of them and the model rebuilds from that point on.
 
 - **Change a sketch:** double-click it in the browser, edit it, finish it.
-- **Change a feature:** double-click it under **Features** in the browser, change its values,
-  click **Update** (or **OK**).
+- **Change a feature:** double-click it in the [History panel](#the-history-panel), change its
+  values, click **Update** (or **OK**).
 
 Later features keep working because faces and edges are named after the features that made them.
 A fillet stays on "the edge between Extrude1's end and its side" even when Extrude1 gets longer.
@@ -15,11 +15,16 @@ A fillet stays on "the edge between Extrude1's end and its side" even when Extru
 ## The History panel
 
 The **History** panel down the right of the view, under the view cube, lists every step of the
-design in the order it was made: sketches, reference planes and features. Collapsed, it shows
+design in the order it's built: sketches, reference planes, features and patterns of bodies or
+components (one step each, however many copies). Collapsed, it shows
 each step's icon (hover for its name); click the button at its bottom to expand it and see the
 names too. Your choice is remembered.
 
 - **Edit a step:** double-click it.
+- **Rename a step:** right-click it and choose **Rename**, or select it and press ++f2++. Type the
+  name and press ++enter++ (++esc++ keeps the old one).
+- **Pick a step into a card:** while a card waits for features (a pattern's, say), click them in
+  the History panel.
 - **Roll back:** drag the green marker up the list. Steps below it dim and are left out of the
   model, as if not made yet, and anything you make now goes in at the marker. Drag it back down
   (or right-click a step and choose **Build Everything**) to build the rest again. Right-click a
@@ -41,7 +46,7 @@ blue (a fillet that rounded its edge, a cut through it). Double-click one to edi
 ## When something no longer builds
 
 If a change makes a later feature impossible, such as a fillet too big for a shortened edge, that
-feature turns **red** in the browser. Hover it to see why. Fix it by editing the feature, or
+feature turns **red** in the History panel. Hover it to see why. Fix it by editing the feature, or
 undo the change.
 
 ## Undo and redo
@@ -53,13 +58,15 @@ one go.
 ## Delete
 
 Select what to delete in the browser (or click a body in the view) and press ++delete++, choose
-**MODIFY › Delete**, or right-click it in the browser and choose **Delete**. You can delete bodies,
+**MODIFY › Delete**, or right-click it in the browser and choose **Delete**. Features and patterns
+are deleted from the History panel: right-click the step and choose **Delete**. You can delete bodies,
 features, sketches, planes, components, instances, connections and section analyses.
 
 - A body takes its features with it.
 - A feature leaves its body, which rebuilds without it. Deleting the feature that made a body
   deletes the body too.
 - A component takes its instances with it, and an instance its connections.
+- A pattern of bodies or components takes its copies with it.
 - If other things use what you're deleting, such as a sketch on a body's face, InvictusCAD names
   them and asks. **Delete All** deletes them too; **Cancel** keeps everything.
 

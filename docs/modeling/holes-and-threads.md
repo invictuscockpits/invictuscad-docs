@@ -64,4 +64,4 @@ Add a thread to a bolt, boss or hole.
 
 ## Change holes and threads
 
-Double-click the Hole or Thread in the browser, change its settings and click **Update**.
+Double-click the Hole or Thread in the [History panel](history.md#the-history-panel), change its settings and click **Update**.

@@ -39,16 +39,17 @@ tick which tools are pinned. In a narrow window, panels that don't fit move unde
 
 The panel at the top left lists everything in the document, in folders: **Components**,
 **Instances**, **Connections**, **Planes**, **Analysis** (sections and deviations), **Scans** (scans
-and the shapes fitted to them), **Sketches**, **Bodies**, **Features** (in the order they were
-made) and **Setups** (CAM).
+and the shapes fitted to them), **Sketches**, **Bodies** and **Setups** (CAM). Features and patterns
+aren't listed here: they're steps of the [History panel](../modeling/history.md#the-history-panel),
+in the order the model is built.
 
 | To | Do |
 |---|---|
 | Show or hide something | Click its eye. A folder's eye hides or shows everything in it |
 | Rename | Select and press ++f2++, or right-click › **Rename**. Only the name you see changes; everything that uses it keeps working |
-| Edit | Double-click a sketch, feature, plane, component, instance or connection to open it |
+| Edit | Double-click a sketch, plane, component, instance or connection to open it (a feature: double-click it in the History panel) |
 | More actions | Right-click: export, make component, save as footprint, link to file, post... |
-| Find out why something failed | Failed features are red; hover for the reason |
+| Find out why something failed | Failed features are red in the History panel; hover for the reason |
 
 Select a body in the browser to see its volume and face, edge and vertex counts at the bottom of
 the view.

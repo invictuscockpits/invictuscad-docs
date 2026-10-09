@@ -54,5 +54,5 @@ Thin wall also works on open curves.
 
 ## Change an extrude
 
-Double-click it in the browser (under **Features**). Change the distance, thickness or direction
+Double-click it in the [History panel](history.md#the-history-panel). Change the distance, thickness or direction
 and click **Update**. Everything after it rebuilds. To change its shape, edit the sketch instead.

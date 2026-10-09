@@ -11,7 +11,7 @@ They share one way of working:
    set **Body** to the body to change (it defaults to the body the sketch is on).
 5. Click **OK**.
 
-To change one later, double-click it in the browser.
+To change one later, double-click it in the [History panel](history.md#the-history-panel).
 
 ## Revolve
 

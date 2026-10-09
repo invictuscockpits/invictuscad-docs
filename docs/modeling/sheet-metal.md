@@ -13,7 +13,7 @@ In the Design workspace, the tabs in the row above the tools choose which tools 
 | **SOLID** | Everything for solid parts (the usual panels) |
 | **SHEET METAL** | **CREATE**: Sketch, Extrude, Flange, Edge Flange, Hem, Convert to Sheet Metal, Hole, Reference Plane. **MAKE**: Edit Flat Pattern, Export Flat Pattern, Nest Parts. MODIFY, ASSEMBLE and INSPECT as on the Solid tab |
 
-Editing a sheet metal feature (double-click it in the browser) switches to the Sheet Metal tab.
+Editing a sheet metal feature (double-click it in the [History panel](history.md#the-history-panel)) switches to the Sheet Metal tab.
 
 ## Start a part
 

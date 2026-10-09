@@ -14,7 +14,7 @@
 | ++ctrl+b++ | Show or hide the browser |
 | ++ctrl+l++ | Show or hide the command log |
 | ++delete++ | Delete the selection |
-| ++f2++ | Rename the selected item in the browser |
+| ++f2++ | Rename the selected item in the browser or the History panel |
 | ++esc++ | Step back: close the card, cancel the shape, finish the sketch, clear the selection |
 | ++ctrl+f12++ | Capture the window as an image |
 
@@ -56,4 +56,4 @@
 | Right-drag, or ++shift++ + middle-drag | Orbit |
 | Wheel | Zoom at the cursor |
 | Click | Select (++ctrl++ or ++shift++ to add) |
-| Double-click in the browser | Edit the item |
+| Double-click in the browser or the History panel | Edit the item |

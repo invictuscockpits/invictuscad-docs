@@ -49,4 +49,4 @@ with it.
     Model half of a symmetric part and mirror its features. Changes to the half you modeled show up
     on both sides.
 
-Double-click a pattern or mirror in the browser to change it.
+Double-click a pattern or mirror in the [History panel](history.md#the-history-panel) to change it. A pattern of bodies or components is one step there: change its count or spacing and copies are added, removed or moved to match. Deleting it deletes its copies.

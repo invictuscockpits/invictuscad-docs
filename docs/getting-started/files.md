@@ -16,7 +16,7 @@ If the open project has unsaved changes, you're asked whether to **Save**, **Dis
 **Cancel** first.
 
 When a project opens, InvictusCAD rebuilds it from its history. If something no longer builds,
-for example a linked part has changed, it tells you, and the feature shows red in the browser.
+for example a linked part has changed, it tells you, and the feature shows red in the [History panel](../modeling/history.md#the-history-panel).
 
 An `.ivc` file is a zip of readable JSON (your design intent: sketches, constraints, feature
 values) plus the shapes. Your work is never locked inside the program.

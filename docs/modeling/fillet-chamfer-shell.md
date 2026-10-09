@@ -30,5 +30,5 @@ Hollows a body out to a wall thickness: enclosures, cups, cases.
 
 ## Change them later
 
-Double-click the fillet, chamfer or shell in the browser to change its size (and a shell's
+Double-click the fillet, chamfer or shell in the [History panel](history.md#the-history-panel) to change its size (and a shell's
 direction), then click **Update**. To use different edges or faces, undo it and make it again.
