@@ -65,6 +65,7 @@ Fits belong to their scan. When you align or move the scan, its fits move with i
 | **Primary** | The main feature: a plane (the bottom face, say) or an axis (the main bore) |
 | **Onto** | Where it goes: the XY, XZ or YZ plane, or the X, Y or Z axis |
 | **Flip** | Turns the scan over, if it lands upside down |
+| **Rest on plane** | Then moves the scan along the primary's direction until its lowest point touches that plane. Use it when the face the part stood on wasn't scanned: fit the top, align it onto XY, and rest the scan on XY |
 | **Secondary** (optional) | A second plane or axis that sets which way the scan turns about the primary: a side face or a second bore |
 | **Onto** | The axis the secondary turns onto: X, Y or Z |
 | **Flip** | The secondary the other way round |

@@ -64,11 +64,18 @@ around meanwhile.
 | Tool | What it does |
 |---|---|
 | **Clean Up** | Removes loose bits smaller than **Keep pieces over** (a share of the largest piece). It also removes triangles with no area, repeats, and triangles past the second on an edge, and turns all the triangles to face outward |
-| **Fill Holes** | Outlines in green the holes it will fill: those up to **Largest hole** across. Every hole has a dot; click it to leave that hole out, or to add one that's larger. The card counts the holes and how many will be filled. They're filled with triangles the scan's own size, blended into the surface around. **0** picks every hole, the scan's open edge too |
+| **Fill Holes** | Outlines in green the holes it will fill: those up to **Largest hole** across, measured at the widest. Every hole has a dot; click it to leave that hole out, or to add one that's larger. The card counts the holes and how many will be filled. Holes are filled with triangles the scan's own size, blended into the surface around. **Flat** closes each with one flat face in its own plane instead, and openings inside it in that plane stay open through it |
 | **Smooth** | Evens out noise without shrinking the part or rounding its sharp edges. **Passes** says how many times, **Strength** how hard (0–100) |
 | **Reduce** | Keeps **Keep** % of the triangles. Flat areas lose the most, curved ones keep their detail. A point cloud is thinned instead |
 | **Fix Normals** | Turns every triangle to face outward (for a scan that shades dark in places) |
 | **Flip Normals** | Turns every triangle the other way |
+
+!!! tip "A scan with an open bottom"
+    A part scanned standing on a table has no bottom: its scan is open there. To close it, open
+    **Fill Holes**, set **Largest hole** to **0** so every opening has a dot, and leave only the
+    bottom's dot chosen. Then tick **Flat** and click **Fill**. The bottom is closed with one flat
+    face, and any holes going through the part stay open through it. To sit the scan on the floor
+    when you align it, use [Rest on plane](fit-and-align.md#align-the-scan).
 
 Clean-ups change the triangles, so a scan's [regions](fit-and-align.md#auto-regions) are cleared
 by them. Run Auto Regions again afterwards. Fits you already made stay.
