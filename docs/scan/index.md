@@ -10,7 +10,7 @@ workspace's own panels:
 
 | Panel | Tools |
 |---|---|
-| MESH | Import Scan, Clean Up, Fill Holes, Smooth, Reduce, Fix Normals, Flip Normals, Export Scan |
+| MESH | Import Scan, Clean Up, Fill Holes, Smooth, Reduce, Fix Normals, Flip Normals, Convert to Body, Export Scan |
 | REGIONS | Auto Regions, Show Regions |
 | FIT | Fit Plane, Fit Cylinder, Fit Cone, Fit Sphere |
 | ALIGN | Align, Move Scan |
@@ -59,7 +59,8 @@ brought in through the [MCP command](../automation/mcp.md) `import_scan` with it
 Scans usually arrive with some mess: specks floating near the part, holes where the scanner
 couldn't see, and noise on every surface. Each tool opens a card. The **Scan** field is filled in
 with the scan selected in the browser, or the last one brought in. Each clean-up is one undo
-step.
+step. On a big scan the work runs in the background with a busy cursor, and you can keep looking
+around meanwhile.
 
 | Tool | What it does |
 |---|---|
@@ -72,6 +73,14 @@ step.
 
 Clean-ups change the triangles, so a scan's [regions](fit-and-align.md#auto-regions) are cleared
 by them. Run Auto Regions again afterwards. Fits you already made stay.
+
+## Convert a scan to a body
+
+**MESH › Convert to Body** makes a body straight from the scan's triangles, where the scan is now.
+A closed scan becomes a solid, with each flat area merged into a single face. An open scan becomes
+a surface (fill its holes first for a solid). It's for scans you want to use as they are, such as
+a sculpted shape to combine with modeled parts or to 3D-print. It works on scans of up to 150,000
+triangles, so **Reduce** bigger ones first.
 
 ## Export a scan
 

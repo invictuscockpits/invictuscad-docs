@@ -39,7 +39,11 @@ try another kind on the same spot.
 | **Angle** (Options) | How far the surface may turn away from the shape before it stops growing (default 20°) |
 
 If the scan has regions and you click inside a region of the same kind, the fit uses that whole
-region.
+region. Hovering the scan tells you which kind of region is under the cursor.
+
+For a surface in pieces, such as a bore cut through by a slot or a face split by a groove, click
+each piece. The fit grows from every spot you click and fits one shape to them all. Click a spot
+again to take it out.
 
 Click **Fit**. The fit goes into the **Scans** folder (*Plane1*, *Cylinder1*...) and is drawn in
 amber-gold. Fits are reference geometry, like [reference planes](../modeling/reference-planes.md):
