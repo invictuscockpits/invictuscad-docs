@@ -24,7 +24,7 @@ A typical scan becomes a model like this:
 1. **Bring the scan in** and **clean it up**: remove loose bits, fill holes and smooth out noise
    (this page).
 2. **Find its regions**, so you can see which areas are flat, round or freeform, and **extract**
-   planes and axes to the important ones ([Extract and Align](extract-and-align.md)).
+   planes and axes from the important ones ([Extract and Align](extract-and-align.md)).
 3. **Align** the scan to the model's axes using those shapes, so the bottom sits on XY and the main
    bore runs along Z ([Extract and Align](extract-and-align.md)).
 4. **Cut sections** into sketches of lines and arcs, then dimension and constrain them and
