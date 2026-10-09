@@ -10,7 +10,7 @@ workspace's own panels:
 
 | Panel | Tools |
 |---|---|
-| MESH | Import Scan, Clean Up, Fill Holes, Smooth, Reduce, Fix Normals, Flip Normals, Convert to Body, Export Scan |
+| MESH | Import Scan, Clean Up, Fill Holes, Smooth, Reduce, Mesh Points, Fix Normals, Flip Normals, Convert to Body, Export Scan |
 | REGIONS | Auto Regions, Show Regions |
 | FIT | Fit Plane, Fit Cylinder, Fit Cone, Fit Sphere |
 | ALIGN | Align, Move Scan |
@@ -50,9 +50,8 @@ The scan's numbers are taken as millimeters. A scanner that works in other units
 brought in through the [MCP command](../automation/mcp.md) `import_scan` with its `unit`.
 
 !!! tip "Point clouds"
-    A point cloud can be brought in, cleaned of stray points, thinned, aligned and compared. Fits,
-    regions and sections need a mesh. Most scanning software can turn its points into a mesh
-    before exporting.
+    A point cloud can be cleaned of stray points, thinned, aligned and compared as it is. Fits,
+    regions and sections need a mesh: **MESH › Mesh Points** makes one (see below).
 
 ## Clean it up
 
@@ -73,6 +72,19 @@ around meanwhile.
 
 Clean-ups change the triangles, so a scan's [regions](fit-and-align.md#auto-regions) are cleared
 by them. Run Auto Regions again afterwards. Fits you already made stay.
+
+## Mesh a point cloud
+
+**MESH › Mesh Points** turns a point cloud into a triangle mesh, so you can fit shapes to it,
+find its regions and cut sections through it. It works out which way the surface faces at each
+point from its neighbors, then traces the surface through the points. Where the scanner saw
+nothing, the mesh has holes, as a scan from a mesh would. **Fill Holes** closes them.
+
+| Value | What it does |
+|---|---|
+| **Detail** | The size of the mesh's triangles. **0** works it out from how closely the points are spaced; larger is coarser, smoother and quicker |
+
+Clouds that came with normals (PLY files often carry them) use those.
 
 ## Convert a scan to a body
 
