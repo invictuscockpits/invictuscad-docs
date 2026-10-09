@@ -64,7 +64,7 @@ around meanwhile.
 | Tool | What it does |
 |---|---|
 | **Clean Up** | Removes loose bits smaller than **Keep pieces over** (a share of the largest piece). It also removes triangles with no area, repeats, and triangles past the second on an edge, and turns all the triangles to face outward |
-| **Fill Holes** | Fills holes up to **Largest hole** across with triangles the scan's own size, blended into the surface around. The card says how many holes there are and how many it will fill. **0** fills every hole, the scan's open edge too, so keep it below the size of the opening if the scan isn't closed |
+| **Fill Holes** | Outlines in green the holes it will fill: those up to **Largest hole** across. Every hole has a dot; click it to leave that hole out, or to add one that's larger. The card counts the holes and how many will be filled. They're filled with triangles the scan's own size, blended into the surface around. **0** picks every hole, the scan's open edge too |
 | **Smooth** | Evens out noise without shrinking the part or rounding its sharp edges. **Passes** says how many times, **Strength** how hard (0–100) |
 | **Reduce** | Keeps **Keep** % of the triangles. Flat areas lose the most, curved ones keep their detail. A point cloud is thinned instead |
 | **Fix Normals** | Turns every triangle to face outward (for a scan that shades dark in places) |
