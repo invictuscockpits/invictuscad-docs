@@ -19,7 +19,10 @@ is what a designer would have drawn.
 | **Arcs** (Options) | Fit arcs as well as lines. Off: lines only |
 | **Level lines** (Options) | Lines within a degree of level or upright are made exactly so, and constrained |
 
-The cut is drawn in blue over the scan while the card is open. Click **Sketch**. The new sketch
+The cut is drawn in blue over the scan while the card is open. A plane lying right along one of
+the scan's faces (a fitted plane at offset 0, or a cut at exactly the height of a step) would only
+trace that face's noise, so the card says so and suggests a small offset to cut just above or
+below the face instead. Click **Sketch**. The new sketch
 opens for editing, with:
 
 - a **circle** wherever the cut goes all the way round on one circle (a bore, a boss);
