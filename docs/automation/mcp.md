@@ -67,7 +67,7 @@ Every command in InvictusCAD is available to it, plus:
 | 2D output | `export_sketch`, `export_flat`, `nest_parts` (with a quantity per part) |
 | Footprints | `list_footprints`, `save_footprint`, `delete_footprint` |
 | CAM | `add_setup`, `add_operation`, `post_setup`, `get_operation`, `list_tools`, `import_tool_library`, `list_machines` |
-| Scan to CAD | `import_scan`, `repair_scan`, `scan_regions`, `fit_scan`, `align_scan`, `move_scan`, `section_scan`, `add_deviation`, `edit_deviation`, `export_scan` |
+| Scan to CAD | `import_scan`, `repair_scan`, `scan_regions`, `fit_scan`, `align_scan`, `move_scan`, `section_scan`, `outline_scan`, `scan_to_body`, `add_deviation`, `edit_deviation`, `export_scan` |
 
 Lengths are millimeters unless given with units (`"0.5in"`, `"1/4\""`, `"10 + 2mm"`). When a
 request can't be done, such as a conflicting constraint or an open profile, the assistant gets the

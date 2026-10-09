@@ -14,7 +14,7 @@ workspace's own panels:
 | REGIONS | Auto Regions, Show Regions |
 | FIT | Fit Plane, Fit Cylinder, Fit Cone, Fit Sphere |
 | ALIGN | Align, Move Scan |
-| MODEL | Section Sketch, then Design's Sketch, Extrude, Revolve, Sweep, Loft, Reference Plane, Fillet, Chamfer, Combine and Hole |
+| MODEL | Section Sketch, Outline Sketch, then Design's Sketch, Extrude, Revolve, Sweep, Loft, Reference Plane, Fillet, Chamfer, Combine and Hole |
 | INSPECT | Deviation, Measure, Section Analysis |
 
 ## The steps

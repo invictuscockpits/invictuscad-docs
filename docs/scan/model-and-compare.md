@@ -36,6 +36,14 @@ the Scan to CAD toolbar.
 
 Sketches on a fitted plane follow it if the scan is aligned again later.
 
+## Outline Sketch
+
+**MODEL › Outline Sketch** sketches the scan's outline as seen straight along a plane's normal:
+its shadow on the plane. That gives the outer edge plus every hole that goes right through. Use
+it for flat parts: a plate, a gasket, a bracket blank, a laser-cut piece. Pick the plane (usually
+the fitted face the part lies on). The outline is fitted with lines and arcs like a section, with
+the same **Tolerance**, **Arcs** and **Level lines** options, and the sketch opens for editing.
+
 ## Build the model
 
 The **MODEL** panel has Design's own tools: [Extrude](../modeling/extrude.md),
