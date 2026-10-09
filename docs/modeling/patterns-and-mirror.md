@@ -1,24 +1,35 @@
 # Patterns and Mirror
 
-Copy features (extrudes, revolves, sweeps, lofts, holes) in a row or grid, around an axis, along
-a path, or across a plane. The copies follow the original when you change it.
+Copy features, whole bodies or components in a row or grid, around an axis, along a path, or
+across a plane. The copies follow the original when you change it.
 
 To repeat geometry inside a sketch instead, see [sketch patterns](../sketching/editing.md#patterns).
 
 ## Make a pattern
 
 1. Choose **MODIFY › Rectangular Pattern**, **Circular Pattern** or **Path Pattern**.
-2. Click the **Features** field, then a face of each feature to copy: clicking a face picks the
-   feature that made it. Leave it empty to copy the whole body.
+2. Choose what to pattern:
+    - **Features:** click a face of each feature to copy (extrudes, revolves, sweeps, lofts,
+      holes): clicking a face picks the feature that made it. The copies are made in the same
+      body, as more of its features.
+    - **Bodies:** pick bodies. Each copy becomes a body of its own, named after the original
+      (*Bracket (2)*, *Bracket (3)*...).
+    - **Components:** click placed components. Each copy becomes another instance of the
+      component, so every copy changes when you edit it.
 3. Fill in the rest:
 
     | Pattern | Fields |
     |---|---|
-    | **Rectangular** | **Direction** (a line, edge or axis), **Count**, **Spacing** (negative goes the other way). Optional **Direction 2**, **Count 2**, **Spacing 2** for a grid |
+    | **Rectangular** | **Direction** (a line, edge or axis), **Count**, **Spacing** (negative goes the other way). Open **Second direction** for a grid |
     | **Circular** | **Axis**, **Count**, **Angle** (360° spreads them evenly around) |
-    | **Path** | **Path** (edges or sketch curves), **Count**, **Spacing** (0 spreads them over the whole path), **Turn with the path** |
+    | **Path** | **Path** (edges or sketch curves), **Count**, **Spacing** (0 spreads them over the whole path), **Follow path** |
 
-4. Click **OK**.
+    For bodies and components, the copies show in green where they'll go.
+
+4. Click **OK**. All the copies are one undo step.
+
+Patterned bodies follow their original: change it and every copy changes with it. Each copy is its
+own body in the browser, which you can hide, color or delete on its own.
 
 ## Mirror
 

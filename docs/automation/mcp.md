@@ -66,6 +66,7 @@ Every command in InvictusCAD is available to it, plus:
 | History | `undo`, `redo` |
 | 2D output | `export_sketch`, `export_flat`, `nest_parts` (with a quantity per part) |
 | Footprints | `list_footprints`, `save_footprint`, `delete_footprint` |
+| Patterns | `pattern_rectangular`, `pattern_circular`, `pattern_path` (features), `pattern_bodies`, `pattern_instances` |
 | CAM | `add_setup`, `add_operation`, `post_setup`, `get_operation`, `list_tools`, `import_tool_library`, `list_machines` |
 | Scan to CAD | `import_scan`, `repair_scan`, `scan_regions`, `extract_scan`, `align_scan`, `move_scan`, `section_scan`, `outline_scan`, `scan_to_body`, `add_deviation`, `edit_deviation`, `export_scan` |
 
