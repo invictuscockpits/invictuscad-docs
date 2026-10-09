@@ -11,7 +11,7 @@ From left to right:
 | **☰ Menu** | **File** (New, Open, Save, Save As, Show Backups Folder), **Edit** (Undo, Redo, Delete, Clear Selection, [Preferences](preferences.md)), **Create**, **View** (Fit, Front, Top, Right, Isometric, Browser, Command Log) and **Help** (License, Capture Window, Open Crash Reports Folder) |
 | **Document name** | A **•** after it means there are unsaved changes. Hover it for the file's full path |
 | **Undo / Redo** | ++ctrl+z++ / ++ctrl+y++. Hover them to see which step they'd undo or redo |
-| **DESIGN / CAM** | Switch between modeling and the [CAM workspace](../cam/index.md) |
+| **Workspaces** (the sidebar on the left) | **Design** (++ctrl+1++), the [CAM workspace](../cam/index.md) (++ctrl+2++) and [Scan to CAD](../scan/index.md) (++ctrl+3++) |
 | **SOLID / SHEET METAL** | Which tools show in Design: solid modeling or [sheet metal](../modeling/sheet-metal.md) |
 | **Tool panels** | **CREATE**, **MODIFY**, **ASSEMBLE**, **MAKE**, **INSPECT**. In a sketch these change to the sketch tools |
 | **Unit** (**mm ▾**) | The document's display unit: millimeters, centimeters, meters, inches or feet |
@@ -38,8 +38,9 @@ tick which tools are pinned. In a narrow window, panels that don't fit move unde
 ## Browser
 
 The panel at the top left lists everything in the document, in folders: **Components**,
-**Instances**, **Connections**, **Planes**, **Sketches**, **Bodies**, **Features** (in the order
-they were made) and **Setups** (CAM).
+**Instances**, **Connections**, **Planes**, **Analysis** (sections and deviations), **Scans** (scans
+and the shapes fitted to them), **Sketches**, **Bodies**, **Features** (in the order they were
+made) and **Setups** (CAM).
 
 | To | Do |
 |---|---|

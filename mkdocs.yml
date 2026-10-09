@@ -91,6 +91,10 @@ nav:
       - Bring In 3D Models: modeling/import-models.md
       - Measure: modeling/measure.md
       - Section Analysis: modeling/section-analysis.md
+  - Scan to CAD:
+      - Scan to CAD: scan/index.md
+      - Fit and Align: scan/fit-and-align.md
+      - Model and Compare: scan/model-and-compare.md
   - Assemblies:
       - Components and Instances: assemblies/components.md
       - Connections: assemblies/connections.md
