@@ -1,6 +1,6 @@
 # Cahaba Studio documentation
 
-Source for [docs.invictuscad.com](https://docs.invictuscad.com): MkDocs with the Material theme,
+Source for [docs.cahaba3d.com](https://docs.cahaba3d.com): MkDocs with the Material theme,
 the same setup as docs.invictuscockpits.com.
 
 ```bash
