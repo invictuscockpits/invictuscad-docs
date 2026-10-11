@@ -12,6 +12,7 @@ From left to right:
 | **Document name** | A **•** after it means there are unsaved changes. Hover it for the file's full path |
 | **Undo / Redo** | ++ctrl+z++ / ++ctrl+y++. Hover them to see which step they'd undo or redo |
 | **Workspaces** (the sidebar on the left) | **Design** (++ctrl+1++), the [CAM workspace](../cam/index.md) (++ctrl+2++) and [Scan to CAD](../scan/index.md) (++ctrl+3++) |
+| **Projects** (below them) | Shows or hides the [Projects panel](projects.md): your project folders as a tree (++ctrl+shift+e++) |
 | **SOLID / SHEET METAL** | Which tools show in Design: solid modeling or [sheet metal](../modeling/sheet-metal.md) |
 | **Tool panels** | **CREATE**, **MODIFY**, **ASSEMBLE**, **MAKE**, **INSPECT**. In a sketch these change to the sketch tools |
 | **Unit** (**mm ▾**) | The document's display unit: millimeters, centimeters, meters, inches or feet |

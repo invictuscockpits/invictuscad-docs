@@ -1,7 +1,7 @@
 # Drive Cahaba Studio from Claude (MCP)
 
 Cahaba Studio includes a [Model Context Protocol](https://modelcontextprotocol.io) server, so an AI
-assistant such as Claude Desktop, Claude Code or Cursor can model for you: sketch and constrain,
+assistant such as Claude Desktop, Claude Code, Cursor or ChatGPT's Codex can model for you: sketch and constrain,
 extrude, add holes and fillets, measure, export flat parts, set up CAM and post programs.
 
 The assistant works **in your open window**: you watch each change happen, it shows in the
@@ -10,8 +10,13 @@ one undo step.
 
 ## Set it up
 
-The assistant runs `cahaba-mcp.exe`, which is installed next to `cahaba.exe`. The paths
-below assume the default install folder, `C:\Program Files\Cahaba Studio`.
+The installer can do this for you: tick **Connect to Claude Desktop** or **Connect to ChatGPT**
+when you install or update. Each box appears only when that program is on the computer.
+Uninstalling takes the connection out again.
+
+To set it up by hand: the assistant runs `cahaba-mcp.exe`, which is installed next to
+`cahaba.exe`. The paths below assume the default install folder,
+`C:\Program Files\Cahaba Studio`.
 
 **Claude Code:**
 
@@ -34,6 +39,23 @@ claude mcp add cahaba -- "C:\Program Files\Cahaba Studio\cahaba-mcp.exe" --launc
 ```
 
 **Cursor:** add the same `mcpServers` entry to `%USERPROFILE%\.cursor\mcp.json`.
+
+**ChatGPT and Codex:** the ChatGPT desktop app and OpenAI's Codex share one settings file,
+`%USERPROFILE%\.codex\config.toml`. Add this to it and restart them:
+
+```toml
+[mcp_servers.cahaba]
+command = 'C:\Program Files\Cahaba Studio\cahaba-mcp.exe'
+```
+
+Or let Cahaba Studio add it (and take it out again with `--unregister-chatgpt`):
+
+```powershell
+& "C:\Program Files\Cahaba Studio\cahaba-mcp.exe" --register-chatgpt
+```
+
+This works in the ChatGPT desktop app's **Codex** tab and in Codex. An ordinary ChatGPT chat
+can only use tools hosted on the internet, so it can't reach Cahaba Studio on your computer.
 
 ## Modes
 

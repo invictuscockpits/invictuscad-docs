@@ -41,6 +41,10 @@ try another kind on the same spot.
 If the scan has regions and you click inside a region of the same kind, it uses that whole
 region. Hovering the scan tells you which kind of region is under the cursor.
 
+A mesh that came from another CAD program (an STL export, say) is not a scan, and is treated
+differently: its faces are exact, so a flat face is taken whole from one click, even when it is
+only two triangles, and nothing but that face counts as its plane.
+
 For a surface in pieces, such as a bore cut through by a slot or a face split by a groove, click
 each piece. It grows from every spot you click and fits one shape to them all. Click a spot
 again to take it out.
@@ -71,7 +75,8 @@ Extracted shapes belong to their scan. When you align or move the scan, they mov
 | **Flip** | The secondary the other way round |
 | **Origin** (optional) | A point, axis or plane to bring to the origin: the center of a bore, a corner |
 
-While the card is open, the scan is shown where it will go. Planes and axes also set the
+While the card is open, the scan is shown where it will go, and the shapes you extracted from
+it move with it, so you click the next one on the part. Planes and axes also set the
 position: a plane passes through the origin, an axis runs along an origin axis. Where they
 disagree, **Origin** wins, then **Primary**, then **Secondary**.
 

@@ -29,7 +29,7 @@ Under each location: its folders, then its files.
 
 - Cahaba Studio projects (`.cb3`, and `.ivc` from before the rename) are listed by name.
 - STEP, STL, DXF, SVG, PDF and G-code files are listed in grey, so a project folder shows
-  everything for the job.
+  everything for the job. So are KiCad projects, boards and schematics.
 - Other files, and hidden folders, are left out.
 
 The project that's open is shown in **bold**.
@@ -37,7 +37,8 @@ The project that's open is shown in **bold**.
 | To | Do |
 |---|---|
 | Open a project | Double-click it, or select it and press ++enter++ |
-| Open a drawing or a program | Double-click it: it opens in whatever Windows uses for that kind of file |
+| Open a drawing, a program or a KiCad file | Double-click it: it opens in whatever Windows uses for that kind of file |
+| Bring a STEP, STL, DXF or SVG file into the open project | Right-click it › **Import into This Project**, or drag it onto the view |
 | Make a folder | Right-click a folder › **New Folder…** |
 | See a file in Explorer | Right-click › **Show in Explorer** |
 

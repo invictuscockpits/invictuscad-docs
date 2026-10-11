@@ -24,19 +24,24 @@ With the card open, click in the view to change the profile:
 
 ![Extruding one region](../assets/images/extrude-region.png)
 
-The card shows how many profiles it's using. Open curves are ignored (unless you choose
-**Thin wall**).
+The card shows what it's using, and how many profiles that makes. Click the **×** beside it to
+clear the profile and pick again. Open curves are ignored (unless you choose **Thin wall**).
 
 ## Operation
 
 | | |
 |---|---|
 | **New body** | A separate body |
-| **Join** | Adds material to the body the sketch is on |
+| **Join** | Adds material to a body |
 | **Cut** | Removes material from it (the direction flips into the part) |
 
-**Join** and **Cut** are available when the sketch is on a face of a body (or you picked a face).
-A sketch on an origin or reference plane makes a new body.
+When the sketch is on a face of a body (or you picked a face), **Join** and **Cut** work on that
+body, and Join is what the card starts with.
+
+A sketch on an origin plane, a reference plane or a plane extracted from a scan starts with
+**New body**. Choose **Join** or **Cut** and the extrusion goes into the body it reaches: the
+card says which (*joins Body1*). If it doesn't reach a body, the card says so; change the
+distance or direction.
 
 ## Thin wall
 

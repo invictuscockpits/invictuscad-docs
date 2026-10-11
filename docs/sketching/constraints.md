@@ -25,6 +25,10 @@ The **Dimension** tool works out what you mean from what you click.
 
     The X and Y axes count as lines, and the origin as a point.
 
+    An edge or corner of a body works too, even when it isn't in the sketch: click it and it's
+    [projected](editing.md#project-geometry-into-the-sketch) into the sketch for you, then dimensioned to. The same goes for
+    the constraint tools.
+
 3. Move the mouse to place the label and click.
 4. The value opens for editing. Type a value or an expression (`40`, `1 1/2"`, `width / 2`) and
    press ++enter++. ++esc++ keeps the measured value.
