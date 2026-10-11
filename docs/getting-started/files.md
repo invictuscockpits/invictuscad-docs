@@ -2,8 +2,11 @@
 
 ## Projects
 
-InvictusCAD projects are `.ivc` files. Everything for a design is in one file: sketches, features,
+Cahaba Studio projects are `.cb3` files. Everything for a design is in one file: sketches, features,
 parameters, components, CAM setups.
+
+Projects made when Cahaba Studio was called InvictusCAD are `.ivc` files. They open as before;
+**Save As** offers the new extension.
 
 | To | Do |
 |---|---|
@@ -15,18 +18,18 @@ parameters, components, CAM setups.
 If the open project has unsaved changes, you're asked whether to **Save**, **Discard** or
 **Cancel** first.
 
-When a project opens, InvictusCAD rebuilds it from its history. If something no longer builds,
+When a project opens, Cahaba Studio rebuilds it from its history. If something no longer builds,
 for example a linked part has changed, it tells you, and the feature shows red in the [History panel](../modeling/history.md#the-history-panel).
 
-An `.ivc` file is a zip of readable JSON (your design intent: sketches, constraints, feature
+A `.cb3` file is a zip of readable JSON (your design intent: sketches, constraints, feature
 values) plus the shapes. Your work is never locked inside the program.
 
 ## Autosave and crash recovery
 
-About a minute after you change something, InvictusCAD saves a recovery copy in the background.
+About a minute after you change something, Cahaba Studio saves a recovery copy in the background.
 Saving the project clears it.
 
-If InvictusCAD closes unexpectedly, the next time it starts it asks **Restore your work?**:
+If Cahaba Studio closes unexpectedly, the next time it starts it asks **Restore your work?**:
 
 - **Restore** opens the autosaved copy. It's marked as unsaved: save it to keep it.
 - **Discard** deletes the copy.
@@ -40,7 +43,7 @@ project are kept, named with the date and time they were saved.
 To get one back, choose **☰ › File › Show Backups Folder**, find the project's folder, and open
 the version you want.
 
-## Where InvictusCAD keeps its files
+## Where Cahaba Studio keeps its files
 
-Everything other than your projects lives in `%LOCALAPPDATA%\InvictusCAD`: backups, autosaves,
+Everything other than your projects lives in `%LOCALAPPDATA%\CahabaStudio`: backups, autosaves,
 footprints, tool libraries, your machines, and your license.

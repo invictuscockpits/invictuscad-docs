@@ -25,7 +25,7 @@ ENGRAVE.
 
 ## Which side it's drawn from
 
-InvictusCAD looks at the part square to its largest flat face, choosing the side with the
+Cahaba Studio looks at the part square to its largest flat face, choosing the side with the
 engraving and pockets on it, and lines it up with its longest straight edge so it comes out
 square. The lower-left corner is at the origin. To choose the side yourself, select that face
 before **MAKE › Export Flat**.

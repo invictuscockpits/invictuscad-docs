@@ -15,7 +15,7 @@ You can also drop a file onto the window.
 McMaster-Carr publishes a 3D model for most of the parts it sells.
 
 1. Choose **File › Insert from McMaster-Carr** (also under **Create**). Their site opens in your
-   web browser, and InvictusCAD starts watching your **Downloads** folder.
+   web browser, and Cahaba Studio starts watching your **Downloads** folder.
 2. Find the part. On its page, open the CAD download, choose **3-D STEP** and save it.
 3. When the file has finished downloading, the part comes into the open design as a body.
 
@@ -23,5 +23,5 @@ Repeat step 2 for as many parts as you need. Watching stops after 30 minutes, or
 **Insert from McMaster-Carr** again.
 
 !!! note
-    McMaster-Carr's terms of use cover how their CAD models may be used and shared. InvictusCAD
+    McMaster-Carr's terms of use cover how their CAD models may be used and shared. Cahaba Studio
     only imports the files you choose to download.

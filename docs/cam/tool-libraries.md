@@ -10,8 +10,8 @@ Open it with **MANAGE › Tool Library** in the CAM workspace.
 If you already keep your tools in Fusion, bring them across rather than typing them in.
 
 1. In Fusion, export the library as **JSON**.
-2. In InvictusCAD, click **Import...** and choose the file.
-3. InvictusCAD copies it into your libraries and reports how many tools came in, plus anything it
+2. In Cahaba Studio, click **Import...** and choose the file.
+3. Cahaba Studio copies it into your libraries and reports how many tools came in, plus anything it
    had to guess at (an unknown tool type, a repeated tool number).
 
 What comes across: tool types, diameters, corner radii, flutes and lengths (metric tools in an inch
@@ -48,7 +48,7 @@ table shows the selected tool's:
 
 ## How speeds and feeds are worked out
 
-When an operation runs, InvictusCAD takes:
+When an operation runs, Cahaba Studio takes:
 
 - **Spindle speed:** the preset's rpm, or surface speed ÷ (π × diameter). It's held inside the
   machine's spindle range, and the first range that fits is chosen.

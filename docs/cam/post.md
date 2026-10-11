@@ -5,7 +5,7 @@ it.
 
 ## See the result first
 
-- **Toolpaths:** feeds are solid blue, rapids dashed yellow. Select an operation in the browser to
+- **Toolpaths:** feeds are solid, in a color for each kind of operation; rapids are dashed yellow. Select an operation in the browser to
   draw it bold.
 - **ACTIONS › Show Stock** (on by default) shows the stock after every visible operation, so you
   can see what's left. Select an operation to see the stock **before** it, with what that operation
@@ -24,7 +24,7 @@ it.
 4. Click **Save...**. The file is named after the setup (or its program name) with the post's
    extension, in your project's folder.
 
-Fix errors before running a program. InvictusCAD still lets you save one with errors, for checking.
+Fix errors before running a program. Cahaba Studio still lets you save one with errors, for checking.
 
 ## What's checked
 

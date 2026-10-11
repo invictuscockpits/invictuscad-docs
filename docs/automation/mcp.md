@@ -1,6 +1,6 @@
-# Drive InvictusCAD from Claude (MCP)
+# Drive Cahaba Studio from Claude (MCP)
 
-InvictusCAD includes a [Model Context Protocol](https://modelcontextprotocol.io) server, so an AI
+Cahaba Studio includes a [Model Context Protocol](https://modelcontextprotocol.io) server, so an AI
 assistant such as Claude Desktop, Claude Code or Cursor can model for you: sketch and constrain,
 extrude, add holes and fillets, measure, export flat parts, set up CAM and post programs.
 
@@ -10,13 +10,13 @@ one undo step.
 
 ## Set it up
 
-The assistant runs `invictuscad-mcp.exe`, which is installed next to `invictuscad.exe`. The paths
-below assume the default install folder, `C:\Program Files\InvictusCAD`.
+The assistant runs `cahaba-mcp.exe`, which is installed next to `cahaba.exe`. The paths
+below assume the default install folder, `C:\Program Files\Cahaba Studio`.
 
 **Claude Code:**
 
 ```bash
-claude mcp add invictuscad -- "C:\Program Files\InvictusCAD\invictuscad-mcp.exe" --launch-app
+claude mcp add cahaba -- "C:\Program Files\Cahaba Studio\cahaba-mcp.exe" --launch-app
 ```
 
 **Claude Desktop:** go to **Settings › Developer › Edit Config**, add this to
@@ -25,8 +25,8 @@ claude mcp add invictuscad -- "C:\Program Files\InvictusCAD\invictuscad-mcp.exe"
 ```json
 {
   "mcpServers": {
-    "invictuscad": {
-      "command": "C:\\Program Files\\InvictusCAD\\invictuscad-mcp.exe",
+    "cahaba": {
+      "command": "C:\\Program Files\\Cahaba Studio\\cahaba-mcp.exe",
       "args": ["--launch-app"]
     }
   }
@@ -39,11 +39,11 @@ claude mcp add invictuscad -- "C:\Program Files\InvictusCAD\invictuscad-mcp.exe"
 
 | Argument | |
 |---|---|
-| (none) | Works in the open InvictusCAD window. If it isn't open, the assistant is told to open it; the next request finds it, with nothing to restart |
-| `--launch-app` | The same, but starts InvictusCAD when it isn't open |
+| (none) | Works in the open Cahaba Studio window. If it isn't open, the assistant is told to open it; the next request finds it, with nothing to restart |
+| `--launch-app` | The same, but starts Cahaba Studio when it isn't open |
 | `--headless` | Never touches the app: the server keeps its own document, for scripts and batch jobs |
 
-Set the environment variable `INVICTUSCAD_MCP=0` to stop InvictusCAD listening for assistants.
+Set the environment variable `CAHABA_MCP=0` to stop Cahaba Studio listening for assistants.
 
 ## Try it
 
@@ -57,7 +57,7 @@ Set the environment variable `INVICTUSCAD_MCP=0` to stop InvictusCAD listening f
 
 ## What the assistant can do
 
-Every command in InvictusCAD is available to it, plus:
+Every command in Cahaba Studio is available to it, plus:
 
 | | Tools |
 |---|---|

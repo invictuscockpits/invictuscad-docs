@@ -14,7 +14,7 @@ The pieces, in the order you use them:
 | **Operation** | One toolpath: facing, pocket, adaptive clearing, contour or drilling | [Operations](operations.md) |
 | **Post** | The G-code file for your controller, after checks | [Check and post](post.md) |
 
-InvictusCAD currently makes **2D milling** toolpaths (2.5-axis: flat floors, vertical walls,
+Cahaba Studio currently makes **2D milling** toolpaths (2.5-axis: flat floors, vertical walls,
 holes) for three-axis mills and routers. Posts are included for **Tormach PathPilot**,
 **LinuxCNC** and **GRBL**.
 
@@ -22,7 +22,7 @@ holes) for three-axis mills and routers. Posts are included for **Tormach PathPi
 
 This walks through facing and cutting out the 5 × 3 inch plate from
 [Your first part](../getting-started/first-part.md) on a Tormach PCNC 770. Open that part (or any
-body of your own) in InvictusCAD first.
+body of your own) in Cahaba Studio first.
 
 ### 1. Switch to CAM
 
@@ -43,7 +43,7 @@ No Fusion library? Click **New...** and add tools by hand instead. See
 
 ### 3. Add a setup
 
-1. Click **SETUP › New Setup**. **Bodies** already lists the plate, and the violet box around it is
+1. Click **SETUP › New Setup**. **Bodies** already lists the plate, and the bronze box around it is
    the stock.
 2. Choose **Machine: Tormach PCNC 770**.
 3. Leave **Stock** on **Box**: 0.05 in extra on the **Sides** and **Top**.
@@ -101,7 +101,7 @@ teal.
 3. Click **Save...**. The file is named after the setup, with PathPilot's `.nc` extension.
 
 !!! warning "Always prove a program out"
-    InvictusCAD checks feeds, spindle speeds, rapids through the stock and travel limits, but it
+    Cahaba Studio checks feeds, spindle speeds, rapids through the stock and travel limits, but it
     doesn't simulate the tool holder or check for collisions with your vise or fixtures. Air-cut
     new programs and keep a hand near the feed hold.
 
@@ -110,7 +110,8 @@ teal.
 - **The browser** has a **Setups** folder. Each setup holds its operations. Double-click a setup or
   operation to change it; right-click a setup for **Post...**. An item turns red when it can't be
   calculated; hover it to see why.
-- **Toolpaths** draw in the CAM workspace only: feeds solid blue, rapids dashed yellow. The selected
+- **Toolpaths** draw in the CAM workspace only: feeds solid, in a color for each kind of operation (facing
+  blue, pockets rose, contours white, and so on), rapids dashed yellow. The selected
   operation is drawn bold. Hide one with its eye in the browser.
 - **Model changes flow through.** Edit the part in DESIGN and its operations recalculate.
 - **Switch back** with **DESIGN** in the top bar. Opening a sketch also returns you to DESIGN.

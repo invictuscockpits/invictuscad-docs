@@ -18,7 +18,7 @@ run them.
 Double-click an operation in the browser to change it later.
 
 !!! note
-    You need a setup and a tool library first. If either is missing, InvictusCAD says so and opens
+    You need a setup and a tool library first. If either is missing, Cahaba Studio says so and opens
     the setup card or the Tool Library.
 
 ## Every operation: tool and speeds
@@ -126,7 +126,7 @@ Cuts along an outline: around the outside of a part, inside a hole, or along a l
 
 ### Cutter compensation
 
-- **Computer** (default): InvictusCAD offsets the path by the tool's radius. The program is the
+- **Computer** (default): Cahaba Studio offsets the path by the tool's radius. The program is the
   tool's center.
 - **Control**: the program follows the wall itself and turns on G41/G42 with the tool's diameter
   offset, so the controller offsets it by the radius in its tool table. The toolpath shown is the

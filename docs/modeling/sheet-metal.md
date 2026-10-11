@@ -1,6 +1,6 @@
 # Sheet Metal
 
-Sheet metal parts are bodies of one thickness: flat walls joined by bends. InvictusCAD knows each
+Sheet metal parts are bodies of one thickness: flat walls joined by bends. Cahaba Studio knows each
 part's **rules** (thickness, bend radius, K-factor, and optionally a bend table) and unfolds it
 into a **flat pattern**: the blank to cut, with its bend lines, ready for a laser, plasma or punch.
 
@@ -126,7 +126,7 @@ bend angle, unless a bend table covers it.
 The flat pattern works from the part's shape, not its history. A STEP file of a sheet metal part
 from any CAD program unfolds as long as it's made of flat walls and bends of one thickness. The
 bends can be **cylindrical** or **conical** (a bend whose radius grows along it, as in a tapered
-flange). A conical bend unrolls into a ring sector. On a part without InvictusCAD rules, the card
+flange). A conical bend unrolls into a ring sector. On a part without Cahaba Studio rules, the card
 measures the thickness and starts the K-factor at the material's value.
 
 **MAKE › Export Flat** and **Nest Parts** also unfold sheet metal parts, so you can nest blanks

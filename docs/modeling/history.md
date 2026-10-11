@@ -25,14 +25,14 @@ names too. Your choice is remembered.
   name and press ++enter++ (++esc++ keeps the old one).
 - **Pick a step into a card:** while a card waits for features (a pattern's, say), click them in
   the History panel.
-- **Roll back:** drag the green marker up the list. Steps below it dim and are left out of the
+- **Roll back:** drag the orange marker up the list. Steps below it dim and are left out of the
   model, as if not made yet, and anything you make now goes in at the marker. Drag it back down
   (or right-click a step and choose **Build Everything**) to build the rest again. Right-click a
   step and choose **Build Up to Here** to put the marker just below it.
 - **Suppress:** right-click a feature and choose **Suppress** to leave it out without deleting
   it. Suppressed steps are struck through; choose **Unsuppress** to bring one back.
 - **Reorder:** drag a step to another place. A step can't go above something it uses (an
-  extrude above its sketch, for example); InvictusCAD says why and leaves it where it was.
+  extrude above its sketch, for example); Cahaba Studio says why and leaves it where it was.
 - **Delete:** right-click a step and choose **Delete**.
 
 The marker's place and suppressed steps are saved with the project.
@@ -40,7 +40,7 @@ The marker's place and suppressed steps are saved with the project.
 ### How was this made?
 
 Click a face, edge or vertex in the view. The History panel lights up the steps that made it in
-green (the sketch and the feature that created it) and the steps that changed it afterwards in
+orange (the sketch and the feature that created it) and the steps that changed it afterwards in
 blue (a fillet that rounded its edge, a cut through it). Double-click one to edit it.
 
 ## When something no longer builds
@@ -67,7 +67,7 @@ features, sketches, planes, components, instances, connections and section analy
   deletes the body too.
 - A component takes its instances with it, and an instance its connections.
 - A pattern of bodies or components takes its copies with it.
-- If other things use what you're deleting, such as a sketch on a body's face, InvictusCAD names
+- If other things use what you're deleting, such as a sketch on a body's face, Cahaba Studio names
   them and asks. **Delete All** deletes them too; **Cancel** keeps everything.
 
 Deleting several things at once is one step to undo.

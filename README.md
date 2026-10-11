@@ -1,4 +1,4 @@
-# InvictusCAD documentation
+# Cahaba Studio documentation
 
 Source for [docs.invictuscad.com](https://docs.invictuscad.com): MkDocs with the Material theme,
 the same setup as docs.invictuscockpits.com.

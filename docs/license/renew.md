@@ -2,10 +2,10 @@
 
 A renewal adds 12 months of updates to your license.
 
-1. Go to [invictuscad.com/renew](https://invictuscad.com/renew) (or **☰ › Help › License ›
+1. Go to [cahaba3d.com/renew](https://cahaba3d.com/renew) (or **☰ › Help › License ›
    Renew Updates...**) and enter your license key.
 2. Check the new updates date, then pay.
-3. InvictusCAD picks up the new date at its next daily check-in. To get it straight away, choose
+3. Cahaba Studio picks up the new date at its next daily check-in. To get it straight away, choose
    **☰ › Help › License › Refresh**.
 
 **Renewing early costs you nothing.** The 12 months are added to the end of your current period.

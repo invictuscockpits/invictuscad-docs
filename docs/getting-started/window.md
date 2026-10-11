@@ -1,6 +1,6 @@
-# The InvictusCAD Window
+# The Cahaba Studio Window
 
-![The InvictusCAD window](../assets/images/first-part-result.png)
+![The Cahaba Studio window](../assets/images/first-part-result.png)
 
 ## Top bar
 

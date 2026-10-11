@@ -8,7 +8,7 @@ setup. A part machined from two sides needs two setups.
 
 1. In CAM, select the bodies to machine in the browser (or select nothing to use every visible
    body).
-2. Click **SETUP › New Setup**. A violet preview of the stock appears and follows your changes.
+2. Click **SETUP › New Setup**. A bronze preview of the stock appears and follows your changes.
 3. Fill in the card (below) and click **OK**.
 
 To change a setup later, double-click it in the browser.

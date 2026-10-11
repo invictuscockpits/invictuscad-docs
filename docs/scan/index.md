@@ -33,7 +33,7 @@ A typical scan becomes a model like this:
 
 ## Bring in a scan
 
-Choose **MESH › Import Scan** (also in **☰ › File**) and pick the file. InvictusCAD reads:
+Choose **MESH › Import Scan** (also in **☰ › File**) and pick the file. Cahaba Studio reads:
 
 | Format | What it is |
 |---|---|

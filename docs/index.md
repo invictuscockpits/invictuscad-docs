@@ -1,13 +1,13 @@
-# InvictusCAD
+# Cahaba Studio
 
-InvictusCAD is parametric CAD and CAM for Windows, built for people who make real parts: sketch,
+Cahaba Studio is parametric CAD and CAM for Windows, built for people who make real parts: sketch,
 constrain, model, assemble, send flat parts to the laser or router, and post G-code for the mill.
 
 <div class="grid cards" markdown>
 
 -   **New here?**
 
-    [Install InvictusCAD](getting-started/install.md), then make
+    [Install Cahaba Studio](getting-started/install.md), then make
     [your first part](getting-started/first-part.md) in five minutes.
 
 -   **Learn the basics**
@@ -27,7 +27,7 @@ constrain, model, assemble, send flat parts to the laser or router, and post G-c
 
 </div>
 
-## How InvictusCAD thinks
+## How Cahaba Studio thinks
 
 - **Everything is parametric.** Features remember their inputs. Change a dimension and the model
   rebuilds from its history. See [Editing your model](modeling/history.md).
@@ -36,8 +36,8 @@ constrain, model, assemble, send flat parts to the laser or router, and post G-c
 - **References are stable.** Faces and edges are named after the features that made them, so later
   features keep working when you edit earlier ones.
 - **Every change is undoable,** including changes made by an [AI assistant](automation/mcp.md).
-- **Your files are yours.** An `.ivc` file is an open zip of JSON design intent plus geometry, and
-  InvictusCAD never locks you out of it, licensed or not.
+- **Your files are yours.** A `.cb3` file is an open zip of JSON design intent plus geometry, and
+  Cahaba Studio never locks you out of it, licensed or not.
 
 Can't find something? Search (top of the page), see the [shortcuts](getting-started/shortcuts.md),
 or [get support](help/support.md).

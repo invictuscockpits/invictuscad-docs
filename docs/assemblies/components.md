@@ -48,13 +48,13 @@ Every instance updates as you work.
 
 ## Linked parts
 
-A component can live in its own `.ivc` file and be used by several projects: a standard bracket,
+A component can live in its own `.cb3` file and be used by several projects: a standard bracket,
 a motor, a common enclosure.
 
 - **Link a component to a file:** right-click it › **Link to File...** and choose where to save
   it. The component is now read from that file (its name shows **↗**).
 - **Use the changes:** after the part's file changes, choose **ASSEMBLE › Update Links**. When
-  you open a project whose linked files changed or went missing, InvictusCAD tells you. The
+  you open a project whose linked files changed or went missing, Cahaba Studio tells you. The
   project still opens with the last shape it had.
 - **Bring it back into the project:** right-click › **Embed**.
 

@@ -80,7 +80,7 @@ The plate rebuilds 5 inches long, and the fillets stay on their corners.
 
 ## 8. Save
 
-Press ++ctrl+s++, choose a name and folder, and click **Save**. Projects are `.ivc` files.
+Press ++ctrl+s++, choose a name and folder, and click **Save**. Projects are `.cb3` files.
 
 ## Where next
 

@@ -32,5 +32,5 @@ position the copy exactly; the whole footprint moves with it.
 In the Footprint card, select it and click **Delete**. Sketches that already use it keep their
 copies.
 
-Footprints are stored in your user folder (`%LOCALAPPDATA%\InvictusCAD\footprints`), so they're
+Footprints are stored in your user folder (`%LOCALAPPDATA%\CahabaStudio\footprints`), so they're
 available in every project on that computer.

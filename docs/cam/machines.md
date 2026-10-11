@@ -1,10 +1,10 @@
 # Machines
 
-A machine tells InvictusCAD what your mill can do: how far each axis travels, how fast it can
+A machine tells Cahaba Studio what your mill can do: how far each axis travels, how fast it can
 feed, its spindle speed ranges, which coolant it has, and which **post** writes its G-code. Every
 setup uses one machine.
 
-## Machines that come with InvictusCAD
+## Machines that come with Cahaba Studio
 
 | Machine | Travel | Spindle | Post | Program in |
 |---|---|---|---|---|

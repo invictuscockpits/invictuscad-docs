@@ -55,7 +55,7 @@ Points are picked before the curve they sit on, so click near a line's end to pi
 
 ## When a constraint is refused
 
-InvictusCAD won't let a constraint break the sketch. You'll see why instead:
+Cahaba Studio won't let a constraint break the sketch. You'll see why instead:
 
 - **"…conflicts with the sketch's other constraints"**: it contradicts something already there.
   Remove one of them first.

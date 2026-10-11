@@ -5,7 +5,7 @@ A license can be active on 2 computers at a time. To use it on another one, free
 ## From the computer you're leaving
 
 Choose **☰ › Help › License › Deactivate This Computer**. The place is freed straight away, and
-InvictusCAD on that computer goes [read-only](read-only.md).
+Cahaba Studio on that computer goes [read-only](read-only.md).
 
 ## From the new computer
 
@@ -17,7 +17,7 @@ Use Here** next to the one you're leaving behind.
 
 If the computer died, was wiped or isn't yours any more:
 
-1. Go to [invictuscad.com/license](https://invictuscad.com/license) and enter your key.
+1. Go to [cahaba3d.com/license](https://cahaba3d.com/license) and enter your key.
 2. Next to the computer you no longer use, choose **Release**.
 
-If that computer is ever turned on again, InvictusCAD there goes read-only at its next check-in.
+If that computer is ever turned on again, Cahaba Studio there goes read-only at its next check-in.
