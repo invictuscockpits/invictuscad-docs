@@ -1,8 +1,7 @@
 site_name: Cahaba Studio Documentation
 site_url: https://docs.cahaba3d.com
-repo_url: https://github.com/invictuscockpits/invictuscad-docs
-repo_name: invictuscockpits/invictuscad-docs
-edit_uri: edit/main/docs/
+# No repo_url: the header has no link to the repository. The page's edit button still goes there.
+edit_uri: https://github.com/invictuscockpits/invictuscad-docs/edit/main/docs/
 
 theme:
   name: material
