@@ -11,7 +11,7 @@ Projects made when Cahaba Studio was called InvictusCAD are `.ivc` files. They o
 | To | Do |
 |---|---|
 | Start a new project | **☰ › File › New** (++ctrl+n++) |
-| Open one | **☰ › File › Open** (++ctrl+o++), double-click the file in Windows, or drop it on the view |
+| Open one | **☰ › File › Open** (++ctrl+o++), double-click it in the [Projects panel](projects.md) or in Windows, or drop it on the view |
 | Save | ++ctrl+s++ |
 | Save under a new name | ++ctrl+shift+s++ |
 
@@ -40,8 +40,9 @@ If Cahaba Studio closes unexpectedly, the next time it starts it asks **Restore 
 Every time you save over a project, the previous version is kept. The last 10 versions of each
 project are kept, named with the date and time they were saved.
 
-To get one back, choose **☰ › File › Show Backups Folder**, find the project's folder, and open
-the version you want.
+To get one back, right-click the project in the [Projects panel](projects.md#versions) ›
+**Versions**, and restore it or save it as a copy. Or choose **☰ › File › Show Backups Folder**,
+find the project's folder, and open the version you want.
 
 ## Where Cahaba Studio keeps its files
 

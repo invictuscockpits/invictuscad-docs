@@ -53,9 +53,15 @@ a motor, a common enclosure.
 
 - **Link a component to a file:** right-click it › **Link to File...** and choose where to save
   it. The component is now read from that file (its name shows **↗**).
+- **Use a part that's already a file:** drag it from the [Projects panel](../getting-started/projects.md)
+  onto the view, or right-click it there › **Insert into This Project**.
 - **Use the changes:** after the part's file changes, choose **ASSEMBLE › Update Links**. When
   you open a project whose linked files changed or went missing, Cahaba Studio tells you. The
   project still opens with the last shape it had.
 - **Bring it back into the project:** right-click › **Embed**.
 
 A linked component can't be edited in place: open its own file to change it.
+
+A project remembers where each linked part is from its own folder, so a folder holding a project
+and its parts can be moved, zipped or copied to another computer whole. Renaming or moving a
+linked part in the Projects panel updates the projects that use it.

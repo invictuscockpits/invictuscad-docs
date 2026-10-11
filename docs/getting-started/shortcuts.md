@@ -12,6 +12,7 @@
 | ++ctrl+1++ / ++ctrl+2++ / ++ctrl+3++ | Design / CAM / Scan to CAD workspace |
 | ++f++ or ++home++ | Fit the view |
 | ++ctrl+b++ | Show or hide the browser |
+| ++ctrl+shift+e++ | Show or hide the [Projects panel](projects.md) |
 | ++ctrl+l++ | Show or hide the command log |
 | ++delete++ | Delete the selection |
 | ++f2++ | Rename the selected item in the browser or the History panel |
