@@ -34,6 +34,9 @@ For laser cutters, plasma tables and routers (LightBurn, SheetCam, Vectric and s
 | **CUT** | The sketch's curves | Red |
 | **ENGRAVE** | Text, as outlines | Blue |
 
+Curves you've given a color, and regions you've filled, go on a layer for each color instead:
+see [Color and Fill](artwork.md#export-for-a-laser).
+
 Construction geometry is left out. Sizes are in your document's unit. DXF files are R12, which
 nearly every program reads.
 

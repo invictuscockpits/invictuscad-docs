@@ -35,6 +35,9 @@ The **Dimension** tool works out what you mean from what you click.
 
 ![Editing a dimension](../assets/images/dimension-editor.png)
 
+To change a dimension later, double-click its value. That works while a drawing tool such as
+**Line** is still on: the dimension opens, and the tool is still there afterwards.
+
 ## Geometric constraints
 
 1. Choose a constraint from **CONSTRAIN**.
@@ -44,13 +47,16 @@ The **Dimension** tool works out what you mean from what you click.
     |---|---|
     | **Fix** | A point or curve, to lock it where it is |
     | **Coincident** | Two points, or a point and a curve |
-    | **Horizontal** / **Vertical** | A line, or two points |
+    | **Horizontal/Vertical** | A line, or two points. One tool for both: it's made level or upright, whichever it is nearer to |
     | **Parallel** / **Perpendicular** / **Collinear** | Two lines |
     | **Equal** | Two lines, or two circles or arcs |
     | **Concentric** | Two circles or arcs |
     | **Tangent** | A line and a circle or arc, or two circles |
     | **Midpoint** | A point and a line |
     | **Symmetric** | Two points, then the line to mirror them about |
+
+**Collinear** works where the direction is settled already: a rectangle's side goes collinear
+with an axis, for example, which puts that side on the axis.
 
 The constraint is added as soon as the picks are complete, and the tool stays ready for the next
 one. A click that doesn't fit shows what the tool needs. ++esc++ clears the picks.

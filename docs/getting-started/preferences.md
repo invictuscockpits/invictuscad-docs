@@ -12,3 +12,17 @@
 
 Preferences apply to documents you start afterwards. An empty, untouched document also takes them
 straight away.
+
+## Keyboard shortcuts
+
+**Keyboard Shortcuts…** in Preferences lists every command with its key. Use the search box to
+find one.
+
+- Click a shortcut and press the keys you want for it. ++backspace++ clears it.
+- **Reset All** puts every shortcut back to what Cahaba Studio starts with.
+- A key can belong to only one command: if you give a command a key another one has, the list
+  names both so you can clear one.
+
+Changes are saved when you click **OK** and take effect at once. Tooltips show the new keys. The
+keys for switching workspaces (++ctrl+1++, ++ctrl+2++, ++ctrl+3++) and for the Projects panel
+aren't in the list.

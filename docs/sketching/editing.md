@@ -63,6 +63,10 @@ Makes a parallel copy of curves at a distance, for example a wall thickness or a
 
 The copy keeps its distance as a dimension you can edit later.
 
+You can also click an edge of the model that isn't in the sketch. It's
+[projected](#project-geometry-into-the-sketch) in for you. If the edge belongs to the face you're
+sketching on, the whole outline of that face comes in, and is offset as one chain.
+
 ![Offset a chain](../assets/images/offset-chain.png)
 
 ## Mirror

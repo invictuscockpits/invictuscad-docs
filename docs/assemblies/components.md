@@ -11,8 +11,23 @@ or to keep an assembly's parts separate.
    Component**.
 
 The bodies, their features, and any sketches and planes only they use move into the new
-component. Its first instance, such as **Component1:1**, stays where the bodies were. Rename the
-component in the browser (++f2++) and its instances follow: **Base:1**, **Base:2**.
+component. Its first instance stays where the bodies were. Rename the component in the browser
+(++f2++) and its instances follow: **Base (1)**, **Base (2)**.
+
+## In the browser
+
+A component shows as a small document of its own:
+
+- **Bodies**, **Sketches** and **Planes** folders for what it's made of.
+- **Components** for other components placed inside it.
+- **Instances**, with a count, listing every place it's put: **Base (1)**, **Base (2)**. An
+  instance that sits inside another component says so, for example **Base (3) - in Bezel**.
+
+## Hide and show
+
+The eye beside a component hides all of it: every instance leaves the view, and everything under
+it in the browser shows as hidden. Each instance and body keeps its own setting, so showing the
+component again brings back what was showing before.
 
 ## Add more instances
 

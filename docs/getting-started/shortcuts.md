@@ -1,5 +1,8 @@
 # Keyboard Shortcuts
 
+These are the keys Cahaba Studio starts with. Change them in
+[Preferences › Keyboard Shortcuts](preferences.md#keyboard-shortcuts).
+
 ## Everywhere
 
 | Keys | Action |

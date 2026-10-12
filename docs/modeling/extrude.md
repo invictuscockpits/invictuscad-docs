@@ -6,8 +6,9 @@ Extrude pushes a closed profile straight out to make a solid, add material to on
 
 1. Finish your sketch with ++e++ (or select a sketch in the browser and choose **CREATE ›
    Extrude**). The **Extrude** card opens with the whole sketch as the profile.
-2. Type the **Distance**, or drag the arrow in the view (hold ++shift++ for finer steps). The
-   ⇅ button beside the field flips the direction.
+2. Type the **Distance** (the field is ready as soon as the card opens: just type), or drag the
+   arrow in the view (hold ++shift++ for finer steps). The ⇅ button beside the field flips the
+   direction.
 3. Choose the **Operation** (see below).
 4. Click **OK** (or press ++enter++ in the Distance field).
 
