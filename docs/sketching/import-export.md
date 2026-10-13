@@ -22,6 +22,29 @@ another program, or a part outline.
 The drawing arrives as one **group**: click it to select the whole thing, drag to move it. Hold
 ++alt++ to drag a single point, or **Ungroup** it to work with the pieces.
 
+### What comes in
+
+- **Layers.** A DXF, Illustrator or PDF file's layers come in as [layers](layers.md) of the
+  sketch, with their names. Hide the ones you don't need, or make them reference only so an
+  extrude leaves them out.
+- **Every artboard.** An Illustrator or PDF file with several artboards (pages) brings in all of
+  them, set out in rows with an inch between them, the first at the top left. The file doesn't
+  say how the artboards were arranged, so this may not match your layout.
+- **Curves as they were drawn.** Straight sides come in as lines and corners stay sharp. A smooth
+  stretch of curve comes in as one spline.
+
+### Large drawings
+
+A drawing of more than 300 curves comes in without constraints joining its ends. The ends still
+meet, so its outlines still extrude; they just aren't tied together if you drag one. The import
+says so when it happens.
+
+A sketch with more than 1,500 curves is drawn in a fine line, so small details and lettering
+stay readable.
+
+Lettering saved as outlines can be tens of thousands of curves. It works, but the sketch gets
+slow to hover and pick in. Hiding those [layers](layers.md) helps.
+
 ## Export a sketch
 
 For laser cutters, plasma tables and routers (LightBurn, SheetCam, Vectric and similar):
@@ -36,6 +59,10 @@ For laser cutters, plasma tables and routers (LightBurn, SheetCam, Vectric and s
 
 Curves you've given a color, and regions you've filled, go on a layer for each color instead:
 see [Color and Fill](artwork.md#export-for-a-laser).
+
+If the sketch has [layers](layers.md), each is written as a layer of the file under its own name
+and color, and hidden layers are left out: see
+[Layers in exported files](layers.md#layers-in-exported-files).
 
 Construction geometry is left out. Sizes are in your document's unit. DXF files are R12, which
 nearly every program reads.

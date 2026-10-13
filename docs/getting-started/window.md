@@ -13,6 +13,7 @@ From left to right:
 | **Undo / Redo** | ++ctrl+z++ / ++ctrl+y++. Hover them to see which step they'd undo or redo |
 | **Workspaces** (the sidebar on the left) | **Design** (++ctrl+1++), the [CAM workspace](../cam/index.md) (++ctrl+2++) and [Scan to CAD](../scan/index.md) (++ctrl+3++) |
 | **Projects** (below them) | Shows or hides the [Projects panel](projects.md): your project folders as a tree (++ctrl+shift+e++) |
+| **Report an Issue**, **Request a Feature** (bottom of the sidebar) | Send a bug or a question, or ask for something new, straight to the developers. Requests are read, then listed at [cahaba3d.com/requests](https://cahaba3d.com/requests) for everyone to vote on, without your name or email |
 | **SOLID / SHEET METAL** | Which tools show in Design: solid modeling or [sheet metal](../modeling/sheet-metal.md) |
 | **Tool panels** | **CREATE**, **MODIFY**, **ASSEMBLE**, **MAKE**, **INSPECT**. In a sketch these change to the sketch tools |
 | **Unit** (**mm ▾**) | The document's display unit: millimeters, centimeters, meters, inches or feet |

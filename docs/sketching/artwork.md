@@ -40,7 +40,8 @@ of its own, which is how LightBurn and similar programs decide what to cut, scor
 |---|---|
 | **STROKE_RRGGBB** | Curves with that color, for example **STROKE_FF0000** for red |
 | **FILL_RRGGBB** | Regions filled with that color, as closed outlines to fill |
-| **CUT**, **ENGRAVE** | Everything you haven't styled, as before |
+| The layer's own name | Unstyled curves on one of the sketch's [layers](layers.md) |
+| **CUT**, **ENGRAVE** | Everything else, as before |
 
 SVG files carry the exact colors and real fills. DXF files can only name a color from a fixed
 table, so an unusual color is written as the nearest one; the layer's name still gives the exact

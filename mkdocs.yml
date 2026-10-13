@@ -75,6 +75,7 @@ nav:
       - Editing Sketches: sketching/editing.md
       - Text: sketching/text.md
       - Color and Fill (Artwork): sketching/artwork.md
+      - Layers: sketching/layers.md
       - Import and Export Drawings: sketching/import-export.md
       - Footprints: sketching/footprints.md
       - Canvases: sketching/canvases.md
