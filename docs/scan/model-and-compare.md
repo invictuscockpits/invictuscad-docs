@@ -64,7 +64,7 @@ distance from the body:
 - **green**: within the tolerance;
 - **yellow to red**: the scan stands out from the model (the model is missing material there);
 - **cyan to blue**: the scan falls short of the model (the model has material the part doesn't);
-- **grey**: too far from the model to measure (a feature you haven't modeled yet).
+- **gray**: too far from the model to measure (a feature you haven't modeled yet).
 
 | Value | What it does |
 |---|---|

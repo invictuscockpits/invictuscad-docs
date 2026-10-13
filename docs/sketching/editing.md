@@ -7,6 +7,7 @@ In selection mode (++esc++ or **Select**):
 | To | Do |
 |---|---|
 | Select a curve | Click it. ++ctrl++ or ++shift+++click adds or removes curves |
+| Select several with a box | Drag from empty space. Dragging to the **right** takes only what is wholly inside the box; dragging to the **left** takes everything it touches. Hold ++ctrl++ or ++shift++ to add to what's selected |
 | Move a point | Drag it. Constrained geometry follows |
 | Move curves | Drag a selected curve; everything selected moves together |
 | Set exact coordinates | Click a curve: the **Dimensions** card shows its values (start and end, center, diameter, radius, angles). Type and press ++enter++ |

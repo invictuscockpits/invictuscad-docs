@@ -33,7 +33,7 @@ To change a setup later, double-click it in the browser.
 |---|---|---|
 | **Box** | **Sides**, **Top**, **Bottom** | A box around the bodies, with this much extra on each side, on top and below |
 | **Round** | **Sides**, **Top**, **Bottom** | A round bar about Z, big enough for the bodies plus **Sides** |
-| **Fixed size** | **Width (X)**, **Depth (Y)**, **Height (Z)**, **Top** | Your stock's actual size, centred on the part, with its top **Top** above the part |
+| **Fixed size** | **Width (X)**, **Depth (Y)**, **Height (Z)**, **Top** | Your stock's actual size, centered on the part, with its top **Top** above the part |
 
 ### Work zero
 

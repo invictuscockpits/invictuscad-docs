@@ -101,6 +101,8 @@ nav:
   - Assemblies:
       - Components and Instances: assemblies/components.md
       - Connections: assemblies/connections.md
+  - Drawings:
+      - Drawings: drawings/index.md
   - Making Parts:
       - Flat Parts: making/flat-parts.md
       - Nest Parts on Sheets: making/nesting.md

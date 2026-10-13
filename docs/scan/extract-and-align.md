@@ -9,7 +9,7 @@ square on the model's axes, so everything you model over it lines up.
 **REGIONS › Auto Regions** divides the scan into regions. Each region is fitted as a plane,
 cylinder, cone or sphere, or left freeform where nothing simple fits. The scan is colored by
 region: planes in blues and teals, cylinders in oranges, cones in purples, spheres in greens,
-freeform in grey.
+freeform in gray.
 
 ![A scan divided into regions: the block's faces in blues, the boss and hole in orange](../assets/images/scan-regions.png)
 

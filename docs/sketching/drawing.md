@@ -51,6 +51,8 @@ point out to its handles.
 | Change how the curve bends | Drag a handle. On a smooth point the opposite handle turns to stay in line |
 | Turn a smooth point into a corner | Hold ++alt++ and drag one of its handles. After that its two handles move separately |
 | Move a point and leave its handles where they are | Hold ++alt++ and drag the point |
+| Add a point | Double-click the path where you want it. The path keeps its shape |
+| Remove a point | Double-click the point. The pieces either side become one |
 
 On an imported drawing that is still a group, ++alt++ is what lets you drag a single point at all,
 so it can't also break a smooth point there. **Ungroup** the drawing first.

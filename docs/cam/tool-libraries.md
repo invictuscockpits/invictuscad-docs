@@ -36,7 +36,7 @@ table shows the selected tool's:
 
 | Column | Meaning |
 |---|---|
-| **Name**, **Material** | How you'll recognise it when choosing it in an operation |
+| **Name**, **Material** | How you'll recognize it when choosing it in an operation |
 | **RPM** | Spindle speed. Leave 0 to work it out from the surface speed |
 | **Surface** | Surface speed (ft/min or m/min, following your document's unit) |
 | **Chip load** | Per tooth. Used to work out the feed when **Feed** is 0 |

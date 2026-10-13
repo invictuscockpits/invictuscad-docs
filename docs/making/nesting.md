@@ -24,5 +24,5 @@ sheets as one DXF or SVG file ready to cut.
 
 The message shows how many parts went on how many sheets and how much of the material is used.
 Each part is laid flat and turned to its tightest rectangle before packing. Every sheet's outline
-is drawn on a **SHEET** layer (grey), next to the parts' usual
+is drawn on a **SHEET** layer (gray), next to the parts' usual
 [cut and engrave layers](flat-parts.md#layers). Your sheet settings are remembered for next time.

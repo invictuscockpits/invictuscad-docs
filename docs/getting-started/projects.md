@@ -28,7 +28,7 @@ it › **Remove from Projects**. The folder and its files are not touched.
 Under each location: its folders, then its files.
 
 - Cahaba Studio projects (`.cb3`, and `.ivc` from before the rename) are listed by name.
-- STEP, STL, DXF, SVG, PDF and G-code files are listed in grey, so a project folder shows
+- STEP, STL, DXF, SVG, PDF and G-code files are listed in gray, so a project folder shows
   everything for the job. So are KiCad projects, boards and schematics.
 - Other files, and hidden folders, are left out.
 
