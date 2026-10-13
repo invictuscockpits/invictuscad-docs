@@ -74,4 +74,12 @@ Deleting several things at once is one step to undo.
 
 ## Box
 
-**CREATE › Box** adds a 100 × 50 × 25 mm box: a quick body to try things on.
+**CREATE › Box** adds a box: a quick body to try things on, or stock to cut into.
+
+1. Type the **Width**, **Depth** and **Height**. The box is previewed as you type; drag the arrow
+   on it to pull the height.
+2. To put it somewhere other than where it's offered, open **Position** and type the **X**, **Y**
+   and **Z** of its corner. A new box is offered to the right of what's already there.
+3. Click **Create**.
+
+The card starts from the size of the last box you made.

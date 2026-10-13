@@ -31,7 +31,8 @@ The drawing arrives as one **group**: click it to select the whole thing, drag t
   them, set out in rows with an inch between them, the first at the top left. The file doesn't
   say how the artboards were arranged, so this may not match your layout.
 - **Curves as they were drawn.** Straight sides come in as lines and corners stay sharp. A smooth
-  stretch of curve comes in as one spline.
+  stretch of curve comes in as one [Bezier path](drawing.md#bezier-paths), exactly as the file
+  has it.
 
 ### Large drawings
 

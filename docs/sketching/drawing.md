@@ -16,10 +16,35 @@ you press ++esc++ or click its button again, so you can draw several shapes in a
 | **Polygon** | ++g++ | Click the center, then a corner. Six sides unless you type another number; the last count is remembered |
 | **Slot** | | Click the first center, the second center, then the width |
 | **Spline** | ++s++ | Click the points it passes through. ++enter++, a double-click, or a second click on the last point finishes it; clicking the first point closes it |
+| **Bezier** | | The pen of a drawing program: see [Bezier paths](#bezier-paths) |
 | **Point** | ++p++ | One click |
 | **Text** | | Click where it goes; see [Text](text.md) |
 
 ![Sketch tools](../assets/images/sketch-tools.png)
+
+### Bezier paths
+
+**CREATE › Bezier** draws the way the pen tool in Illustrator or Inkscape does:
+
+| To | Do |
+|---|---|
+| Place a corner | Click |
+| Place a smooth point | Click and drag. The drag pulls out the point's handles, which set how the curve leaves and arrives |
+| Close the path | Click the first point |
+| Finish it open | ++enter++, or click the last point again |
+
+A stretch between two corners is a straight line. The curve passes through the points you
+placed and bends towards the handles.
+
+A **Spline**, by comparison, is one smooth curve through every point you click, with no corners
+and no handles. Use Bezier when you want corners and curves in one path, or to match artwork
+from a drawing program.
+
+Afterwards the path's points and handles can be dragged like any sketch point. Dragging a point
+doesn't carry its handles with it yet.
+
+Bezier has no shortcut key to start with; give it one in
+[Preferences › Keyboard Shortcuts](../getting-started/preferences.md#keyboard-shortcuts).
 
 Rectangle and Center Rectangle share one toolbar button. It shows the one you used last; the small
 arrow at its corner offers both.
