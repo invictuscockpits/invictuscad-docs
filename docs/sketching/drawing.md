@@ -40,8 +40,20 @@ A **Spline**, by comparison, is one smooth curve through every point you click, 
 and no handles. Use Bezier when you want corners and curves in one path, or to match artwork
 from a drawing program.
 
-Afterwards the path's points and handles can be dragged like any sketch point. Dragging a point
-doesn't carry its handles with it yet.
+#### Reshape a path
+
+Click a finished path to select it. Its points show as dots, with a fine line from each smooth
+point out to its handles.
+
+| To | Do |
+|---|---|
+| Move a point | Drag it. Its handles go with it, so the curve keeps its shape there |
+| Change how the curve bends | Drag a handle. On a smooth point the opposite handle turns to stay in line |
+| Turn a smooth point into a corner | Hold ++alt++ and drag one of its handles. After that its two handles move separately |
+| Move a point and leave its handles where they are | Hold ++alt++ and drag the point |
+
+On an imported drawing that is still a group, ++alt++ is what lets you drag a single point at all,
+so it can't also break a smooth point there. **Ungroup** the drawing first.
 
 Bezier has no shortcut key to start with; give it one in
 [Preferences › Keyboard Shortcuts](../getting-started/preferences.md#keyboard-shortcuts).
