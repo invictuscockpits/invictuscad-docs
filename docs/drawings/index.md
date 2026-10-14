@@ -32,8 +32,16 @@ does; this page calls them by those names.
 |---|---|
 | Add a view of a body | **Base View** |
 | Move a view | Click it, then drag |
-| Show or hide its hidden lines | Select it, then **Hidden Lines** |
-| Remove it | Select it, then **Delete View** or ++delete++. Its dimensions and notes go with it |
+| Change it | Double-click it, or right-click it and choose **Edit View** |
+| Show or hide its hidden lines | Select it, then **Hidden Lines**; or right-click it |
+| Remove it | Select it, then **Delete View** or ++delete++; or right-click it. Its dimensions and notes go with it |
+
+Editing a base view changes its **Body** (or the whole assembly), the side it's **Seen from**, its
+**Scale** and its **Hidden lines**. It stays where it is on the sheet, and its dimensions and notes
+follow. A projected or section view takes its body, side and scale from the view it came from, so
+its card has only **Hidden lines** (a detail view has **Scale** too).
+
+Where a fillet blends into the face beside it, a line is drawn, as most drawings show it.
 
 ### Projected views
 
@@ -96,6 +104,13 @@ Sections and details follow the model, and you can dimension and note them like 
 - **Title**, **Drawn by**, **Date** and **Number**, which fill in the title block.
 - **General tolerance**: the tolerance of dimensions that don't carry their own, such as ±0.1. It
   gets a box in the title block, **TOLERANCE UNLESS NOTED**. Leave it empty for no box.
+- **Units on dimensions**: writes each length with its unit after it, `50 mm`.
+- **Second unit**: writes each length again in another unit, in square brackets: `50 [1.969]`, or
+  `50 mm [1.969 in]` with units on. Tolerances are converted too.
+
+The title block's **UNITS** box always says what unit the numbers are in: the document's, and the
+second unit in brackets when there is one. Angles stay in degrees; chamfer callouts and hole notes
+are written in the document's unit only.
 
 ### More than one sheet
 
@@ -120,14 +135,21 @@ Click **Dimension** (or press ++d++), then click what to measure and where the n
 | Between two corners | One corner, then the other, then where the number goes |
 | To a hole's center | A corner, then the hole (or click the hole's center directly) |
 | From a hole or corner to an edge | The hole's center or the corner, then the edge |
+| Between two edges | One edge, then another that runs the same way (across or up the page), then where the number goes |
 | A hole | The hole's circle: see [Hole notes](#hole-notes) |
 | A circle that isn't a hole | The circle, for its diameter (an arc gives its radius) |
+| A fillet's radius | The middle of its arc, where it's seen as an arc |
+| A chamfer | Its slope, where it's seen from its end. It's called out as `4 X 45°` (or `4 X 2` when its two sides differ) |
 
 For two corners, where you put the number decides the direction: above or below them measures
 across the page, beside them measures up the page, and off to a corner measures straight between
 them. A preview shows what you'll get before you click.
 
 A dimension to an edge is measured square to that edge.
+
+Between two edges is the way to dimension a part whose corners are rounded or cut off: there's no
+corner at its full width, so click both sides. An edge followed by a click on empty paper is still
+that edge's own length.
 
 On an isometric view, a dimension always runs straight from one point to the other and reads the
 model's true length, not its foreshortened length on the page.
@@ -137,12 +159,21 @@ are written in the document's unit, and they follow the model.
 
 The tool stays on for the next dimension. ++esc++ ends it.
 
-To move a dimension, click its number and drag. To remove it, select it and press ++delete++.
-++delete++ only ever removes what's selected on the sheet, never the drawing.
+To move a dimension, drag its number:
+
+- **Along the line**, only the number moves. Drop it near the middle and it centers itself; drag it
+  past an end and the line carries on out to it.
+- **Across the line**, the whole dimension moves closer to or farther from the view.
+
+A dimension too short for its arrows draws them outside, pointing in, with the number beside it.
+
+Right-click a dimension for **Edit Dimension** and **Delete**. To remove one, you can also select it
+and press ++delete++. ++delete++ only ever removes what's selected on the sheet, never the drawing.
 
 ## Tolerances and dimension text
 
-Double-click a dimension's number to open its card.
+Double-click a dimension's number, or right-click it and choose **Edit Dimension**, to open its
+card.
 
 | Field | What it does | Reads |
 |---|---|---|
@@ -214,14 +245,17 @@ only.
 
 | Tool | What it does | How |
 |---|---|---|
-| **Center Mark** | A cross through the middle of a circle | Click the circle |
+| **Center Mark** | A cross through the middle of a circle; or, for a hole or round part seen from the side, its centerline | Click the circle. From the side, click the hole's rim where it meets the face (it highlights) |
 | **Note** | Words on the sheet, with an arrow if they point at something | Click what it points at, then where it goes. Or click empty paper for a note with no arrow |
 | **Balloon** | A number in a circle with an arrow | Click what it points at, then where it goes. Balloons number themselves 1, 2, 3 |
 
 Notes and balloons that point at the model follow it.
 
+A centerline runs the length of the hole or round part, from its first circle to its last, a
+little past each end.
+
 To change any of them: click to select, drag to move, ++delete++ to remove. Double-click a note to
-change its words, or a balloon to change its number.
+change its words, or a balloon to change its number. Right-click any of them for the same.
 
 ## Tables
 
@@ -268,7 +302,7 @@ when a part is moved.
 | Format | Contains |
 |---|---|
 | **PDF** | Each sheet at its true size, a page each: views, dimensions, notes, tables and the title block |
-| **DXF**, **SVG** | The lines, on the layers **BORDER**, **VISIBLE**, **HIDDEN**, **DIMENSION**, **CENTER**, **HATCH** and **SECTION**. Numbers and words aren't included. Several sheets are laid side by side |
+| **DXF**, **SVG** | The lines, on the layers **BORDER**, **VISIBLE**, **HIDDEN**, **DIMENSION**, **CENTER**, **HATCH** and **SECTION**, and the numbers and words on **TEXT**. Several sheets are laid side by side |
 
 ## From an assistant
 
