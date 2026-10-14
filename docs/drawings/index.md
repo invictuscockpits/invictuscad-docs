@@ -15,6 +15,9 @@ view of everything together.
 
 The drawing is listed under **Drawings** in the browser. Double-click it there to open it again.
 
+The drawing's tools are the row of icons above the sheet. Hover over one for its name and what it
+does; this page calls them by those names.
+
 | To | Do |
 |---|---|
 | Zoom and pan | Wheel; drag with the middle or right button |
@@ -65,6 +68,9 @@ and a letter at each end. The section is captioned **SECTION A-A** and stays in 
 view it came from. Letters run A, B, C on their own.
 
 Cuts are straight, right across the view. Holes and other openings are left clear of hatching.
+
+A section is cut from a view seen square on (front, top, right and so on). **Section View** is
+off for an isometric view.
 
 ### Detail views
 
@@ -121,12 +127,16 @@ them. A preview shows what you'll get before you click.
 
 A dimension to an edge is measured square to that edge.
 
+On an isometric view, a dimension always runs straight from one point to the other and reads the
+model's true length, not its foreshortened length on the page.
+
 Dimensions measure the model, not the paper: a 100 mm edge reads 100 on a half-size view. They
 are written in the document's unit, and they follow the model.
 
 The tool stays on for the next dimension. ++esc++ ends it.
 
 To move a dimension, click its number and drag. To remove it, select it and press ++delete++.
+++delete++ only ever removes what's selected on the sheet, never the drawing.
 
 ## Hole notes
 
