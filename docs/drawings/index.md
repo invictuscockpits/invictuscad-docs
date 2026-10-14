@@ -10,6 +10,9 @@ model changes, the views and dimensions change with it.
 2. On the card, choose the **Body**, the side it's **Seen from** (front, top, right, left, back,
    bottom or isometric) and whether to show **Hidden lines**. Click **Place**.
 
+When the model has more than one part placed, **Body** also offers **(Whole assembly)**, for a
+view of everything together.
+
 The drawing is listed under **Drawings** in the browser. Double-click it there to open it again.
 
 | To | Do |
@@ -85,6 +88,19 @@ Sections and details follow the model, and you can dimension and note them like 
 - **Size**: A4 to A0, Letter, Tabloid, ANSI C or ANSI D, landscape.
 - **Scale**: of the views. 0.5 is half size (1:2), 2 is twice (2:1).
 - **Title**, **Drawn by**, **Date** and **Number**, which fill in the title block.
+
+### More than one sheet
+
+A drawing can have several sheets, all the same size: the assembly on the first, say, and a part
+on each of the others.
+
+| To | Do |
+|---|---|
+| Add a sheet | **+ Sheet**. It opens, empty |
+| Go between sheets | **‹** and **›**, either side of **1 of 2** |
+
+Whatever you place goes on the sheet that's showing. Each sheet's title block says which it is
+(**1 OF 2**). A sheet with something on it can't be removed.
 
 ## Dimensions
 
@@ -166,20 +182,44 @@ Drag a table to move it. Double-click it to change it.
 The link between a table and its balloons is the number: row 2 is about balloon 2. If you
 renumber a balloon, change the table's row to match.
 
+## Parts list
+
+A parts list is a table that writes itself from the assembly: a row for each
+[component](../assemblies/components.md), with how many of it are placed and its material. A body that
+isn't in a component gets a row too.
+
+1. Place a view of the **(Whole assembly)**.
+2. Click **Parts List**.
+
+The list goes at the top left of the sheet, and each part gets a numbered balloon above the view,
+pointing at the first one of it. Drag the list and the balloons where you want them.
+
+The list and its balloons keep up with the model: place another copy of a part and its quantity
+goes up; add a part and it gets a row. A drawing has one parts list; clicking **Parts List** again
+selects it.
+
+Without a view of the assembly on the sheet, you get the list with no balloons. To add a balloon
+for a part later, use `add_drawing_balloon` with `part` from an assistant.
+
+Dimensions and notes can't yet pick the edges of an assembly view. Dimension each part on its own
+view, on another sheet.
+
 ## Export
 
 **Export** saves the drawing as:
 
 | Format | Contains |
 |---|---|
-| **PDF** | The whole sheet at its true size: views, dimensions, notes, tables and the title block |
-| **DXF**, **SVG** | The lines, on the layers **BORDER**, **VISIBLE**, **HIDDEN**, **DIMENSION**, **CENTER**, **HATCH** and **SECTION**. Numbers and words aren't included |
+| **PDF** | Each sheet at its true size, a page each: views, dimensions, notes, tables and the title block |
+| **DXF**, **SVG** | The lines, on the layers **BORDER**, **VISIBLE**, **HIDDEN**, **DIMENSION**, **CENTER**, **HATCH** and **SECTION**. Numbers and words aren't included. Several sheets are laid side by side |
 
 ## From an assistant
 
 Over [MCP](../automation/mcp.md): `add_drawing`, `edit_drawing`, `add_drawing_view`,
 `edit_drawing_view`, `delete_drawing_view`, `add_drawing_dimension`, `edit_drawing_dimension`,
 `delete_drawing_dimension`, `add_drawing_note`, `add_drawing_hole_note`,
-`add_drawing_centermark`, `add_drawing_balloon`, `add_drawing_table`,
+`add_drawing_centermark`, `add_drawing_balloon`, `add_drawing_table`, `add_drawing_parts_list`,
 `edit_drawing_annotation`, `delete_drawing_annotation` and `export_drawing`. A section or detail
-view is `add_drawing_view` with `section_of` or `detail_of`.
+view is `add_drawing_view` with `section_of` or `detail_of`; a view of everything is
+`assembly: true`. `edit_drawing` with `sheets` sets how many sheets there are, and views, notes and
+tables take a `sheet`.
