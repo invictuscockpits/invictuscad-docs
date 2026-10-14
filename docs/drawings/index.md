@@ -127,6 +127,22 @@ The title block's **UNITS** box always says what unit the numbers are in: the do
 second unit in brackets when there is one. Angles stay in degrees; chamfer callouts and hole notes
 are written in the document's unit only.
 
+**Use for new drawings**, ticked when you click **OK**, makes every new drawing start with this
+one's size, scale, drawn by, general tolerance, projection and unit settings. The title, number and
+date are each drawing's own and aren't carried over. The setting is kept on this computer.
+
+### Revisions
+
+Click **Revisions** to see the drawing's revisions and change them. Each has a letter, what changed,
+the date and who made it.
+
+**Add Revision** starts the next one: the next letter (A, B, C, or the next number if you number
+them), today's date, and the same name as the last. Type what changed, then click **OK**.
+
+All the revisions are listed in a **REVISIONS** block at the top right of the first sheet, and the
+latest letter is in a **REV** box in every sheet's title block. To correct or remove one, change its
+row or select it and click **Remove**.
+
 ### More than one sheet
 
 A drawing can have several sheets, all the same size: the assembly on the first, say, and a part
@@ -330,4 +346,5 @@ Over [MCP](../automation/mcp.md): `add_drawing`, `edit_drawing`, `add_drawing_vi
 view is `add_drawing_view` with `section_of` or `detail_of`, and a projected view with `parent` and
 `project` (above, below, left or right); a view of everything is
 `assembly: true`. `edit_drawing` with `sheets` sets how many sheets there are, and views, notes and
-tables take a `sheet`.
+tables take a `sheet`. `edit_drawing` with `revisions` sets the whole list:
+`"A; Initial release; 2026-10-13; CJ | B; Hole moved; 2026-11-02; CJ"`.
