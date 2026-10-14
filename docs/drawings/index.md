@@ -40,6 +40,44 @@ A projected view is the view from another side, kept in line with the one it cam
 A projected view can only be dragged along its line, and it follows when the front view moves.
 Projected views come from a front view; for anything else, use **Base View**.
 
+### Section views
+
+A section view shows the part cut open, with the cut material hatched.
+
+1. Select the view to cut.
+2. Click **Section View**.
+3. Click where the cut should pass through the view. Clicking a corner or a hole's center puts
+   it exactly there.
+4. Click where the section goes:
+
+    | Put it | The cut runs | Seen from |
+    |---|---|---|
+    | To the right or left of the view | Up the view | That side |
+    | Above or below the view | Across the view | That side |
+
+    A line follows the cursor to show which cut you'll get.
+
+The view it was cut from gets the cutting line, with arrows pointing the way the section looks
+and a letter at each end. The section is captioned **SECTION A-A** and stays in line with the
+view it came from. Letters run A, B, C on their own.
+
+Cuts are straight, right across the view. Holes and other openings are left clear of hatching.
+
+### Detail views
+
+A detail view shows a small area of a view, larger.
+
+1. Select the view. A section view works too.
+2. Click **Detail View**.
+3. Click the middle of the area, then click again to set how far out its circle reaches.
+4. Click where the detail goes.
+
+The detail is drawn at twice the scale of the view it came from and captioned, for example,
+**DETAIL B (2:1)**. The view it came from gets the circle and the letter. A detail of a section
+keeps the hatching.
+
+Sections and details follow the model, and you can dimension and note them like any other view.
+
 ## The sheet
 
 **Sheet** opens a card for:
@@ -135,7 +173,7 @@ renumber a balloon, change the table's row to match.
 | Format | Contains |
 |---|---|
 | **PDF** | The whole sheet at its true size: views, dimensions, notes, tables and the title block |
-| **DXF**, **SVG** | The lines, on the layers **BORDER**, **VISIBLE**, **HIDDEN**, **DIMENSION** and **CENTER**. Numbers and words aren't included |
+| **DXF**, **SVG** | The lines, on the layers **BORDER**, **VISIBLE**, **HIDDEN**, **DIMENSION**, **CENTER**, **HATCH** and **SECTION**. Numbers and words aren't included |
 
 ## From an assistant
 
@@ -143,4 +181,5 @@ Over [MCP](../automation/mcp.md): `add_drawing`, `edit_drawing`, `add_drawing_vi
 `edit_drawing_view`, `delete_drawing_view`, `add_drawing_dimension`, `edit_drawing_dimension`,
 `delete_drawing_dimension`, `add_drawing_note`, `add_drawing_hole_note`,
 `add_drawing_centermark`, `add_drawing_balloon`, `add_drawing_table`,
-`edit_drawing_annotation`, `delete_drawing_annotation` and `export_drawing`.
+`edit_drawing_annotation`, `delete_drawing_annotation` and `export_drawing`. A section or detail
+view is `add_drawing_view` with `section_of` or `detail_of`.
