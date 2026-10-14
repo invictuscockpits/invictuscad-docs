@@ -47,12 +47,26 @@ Where a fillet blends into the face beside it, a line is drawn, as most drawings
 
 A projected view is the view from another side, kept in line with the one it came from.
 
-1. Select a **front** view.
+1. Select a view: a base view, a section, or another projected view. An isometric view can't be
+   projected from.
 2. Click **Projected View**.
-3. Click above it for the top view, below for the bottom, or beside it for the right or left.
+3. Click above, below, left or right of it.
 
-A projected view can only be dragged along its line, and it follows when the front view moves.
-Projected views come from a front view; for anything else, use **Base View**.
+From a front view, above gives the top view, below the bottom, and beside it the right or left.
+From any other view it works the same way, as if the part were turned to face you. A view
+projected off a top or side view can come out turned or upside down: that's correct projection,
+but if you'd rather have the usual orientation, use **Base View** instead.
+
+A projected view can only be dragged along its line, and it follows when the view it came from
+moves. It also follows that view's changes: turn it to another side, or give it another body, and
+the projected views change with it.
+
+The **Projection** setting on the [sheet](#the-sheet) decides which side each view goes on:
+
+| Projection | The view from above goes | Used in |
+|---|---|---|
+| **Third angle** (the default) | Above | The US and Canada |
+| **First angle** | Below | Europe and most of the world (ISO) |
 
 ### Section views
 
@@ -104,6 +118,7 @@ Sections and details follow the model, and you can dimension and note them like 
 - **Title**, **Drawn by**, **Date** and **Number**, which fill in the title block.
 - **General tolerance**: the tolerance of dimensions that don't carry their own, such as ±0.1. It
   gets a box in the title block, **TOLERANCE UNLESS NOTED**. Leave it empty for no box.
+- **Projection**: third angle or first angle, for where [projected views](#projected-views) go.
 - **Units on dimensions**: writes each length with its unit after it, `50 mm`.
 - **Second unit**: writes each length again in another unit, in square brackets: `50 [1.969]`, or
   `50 mm [1.969 in]` with units on. Tolerances are converted too.
@@ -312,6 +327,7 @@ Over [MCP](../automation/mcp.md): `add_drawing`, `edit_drawing`, `add_drawing_vi
 `prefix`, `suffix`, `tolerance`, `plus`, `minus`, `fit`, `places` and `reference`), `add_drawing_note`, `add_drawing_hole_note`,
 `add_drawing_centermark`, `add_drawing_balloon`, `add_drawing_table`, `add_drawing_parts_list`,
 `edit_drawing_annotation`, `delete_drawing_annotation` and `export_drawing`. A section or detail
-view is `add_drawing_view` with `section_of` or `detail_of`; a view of everything is
+view is `add_drawing_view` with `section_of` or `detail_of`, and a projected view with `parent` and
+`project` (above, below, left or right); a view of everything is
 `assembly: true`. `edit_drawing` with `sheets` sets how many sheets there are, and views, notes and
 tables take a `sheet`.
