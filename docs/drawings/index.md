@@ -94,6 +94,8 @@ Sections and details follow the model, and you can dimension and note them like 
 - **Size**: A4 to A0, Letter, Tabloid, ANSI C or ANSI D, landscape.
 - **Scale**: of the views. 0.5 is half size (1:2), 2 is twice (2:1).
 - **Title**, **Drawn by**, **Date** and **Number**, which fill in the title block.
+- **General tolerance**: the tolerance of dimensions that don't carry their own, such as ±0.1. It
+  gets a box in the title block, **TOLERANCE UNLESS NOTED**. Leave it empty for no box.
 
 ### More than one sheet
 
@@ -137,6 +139,34 @@ The tool stays on for the next dimension. ++esc++ ends it.
 
 To move a dimension, click its number and drag. To remove it, select it and press ++delete++.
 ++delete++ only ever removes what's selected on the sheet, never the drawing.
+
+## Tolerances and dimension text
+
+Double-click a dimension's number to open its card.
+
+| Field | What it does | Reads |
+|---|---|---|
+| **Before** | Words before the number | 2X 60 |
+| **After** | Words after it | 60 TYP |
+| **Tolerance** | See below | |
+| **Decimal places** | **As few as it needs** drops trailing zeros. A number keeps them | 100.00 |
+| **Reference** | Puts the dimension in brackets | (100) |
+
+The kinds of tolerance:
+
+| Tolerance | Fill in | Reads |
+|---|---|---|
+| **Plus or minus** | **Over**: how far either way | 60 ±0.2 |
+| **Over and under** | **Over** and **Under**, each as a positive amount | 60, then +0.1 above -0.05 |
+| **Limits** | **Over** and **Under** | 60.1 above 59.95, in place of the number |
+| **Fit** | **Fit**: the fit's letters | Ø20 H7 |
+
+This works on every dimension: lengths, diameters, radii and angles. A length's tolerance is
+written in the document's unit; an angle's is in degrees. To see a tight tolerance in full, raise
+the decimal places: +0.021 needs three.
+
+The size itself still comes from the model. A tolerance says how far a made part may be from it;
+it doesn't change the model.
 
 ## Angles
 
@@ -244,7 +274,8 @@ when a part is moved.
 
 Over [MCP](../automation/mcp.md): `add_drawing`, `edit_drawing`, `add_drawing_view`,
 `edit_drawing_view`, `delete_drawing_view`, `add_drawing_dimension`, `edit_drawing_dimension`,
-`delete_drawing_dimension` (an angle is `kind: "angle"` between two edges), `add_drawing_note`, `add_drawing_hole_note`,
+`delete_drawing_dimension` (an angle is `kind: "angle"` between two edges; a dimension takes
+`prefix`, `suffix`, `tolerance`, `plus`, `minus`, `fit`, `places` and `reference`), `add_drawing_note`, `add_drawing_hole_note`,
 `add_drawing_centermark`, `add_drawing_balloon`, `add_drawing_table`, `add_drawing_parts_list`,
 `edit_drawing_annotation`, `delete_drawing_annotation` and `export_drawing`. A section or detail
 view is `add_drawing_view` with `section_of` or `detail_of`; a view of everything is
