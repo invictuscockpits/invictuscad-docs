@@ -138,6 +138,22 @@ The tool stays on for the next dimension. ++esc++ ends it.
 To move a dimension, click its number and drag. To remove it, select it and press ++delete++.
 ++delete++ only ever removes what's selected on the sheet, never the drawing.
 
+## Angles
+
+Click **Angle**, click two straight edges, then click where the number goes.
+
+Two edges make two angles, a sharp one and the rest of the half turn. Where you put the number
+picks which: inside the corner for the angle between the edges, outside past the corner for the
+other. A preview shows the angle before you click.
+
+The arc is centered where the two edges' lines meet, even when the edges themselves stop short of
+each other, and it passes through the spot you clicked. On an isometric view, the angle is the
+true angle in the model.
+
+Edges that are parallel in the view have no angle between them and can't be picked together. The
+tool stays on for the next angle; ++esc++ ends it. Move and remove an angle like any other
+dimension.
+
 ## Hole notes
 
 A hole made with the [Hole](../modeling/holes-and-threads.md) tool can be noted in one click, and
@@ -211,8 +227,9 @@ selects it.
 Without a view of the assembly on the sheet, you get the list with no balloons. To add a balloon
 for a part later, use `add_drawing_balloon` with `part` from an assistant.
 
-Dimensions and notes can't yet pick the edges of an assembly view. Dimension each part on its own
-view, on another sheet.
+Dimensions, angles, notes, hole notes, center marks and balloons all work on a view of the
+assembly, and can run from one part to another: the distance between two parts, say. They follow
+when a part is moved.
 
 ## Export
 
@@ -227,7 +244,7 @@ view, on another sheet.
 
 Over [MCP](../automation/mcp.md): `add_drawing`, `edit_drawing`, `add_drawing_view`,
 `edit_drawing_view`, `delete_drawing_view`, `add_drawing_dimension`, `edit_drawing_dimension`,
-`delete_drawing_dimension`, `add_drawing_note`, `add_drawing_hole_note`,
+`delete_drawing_dimension` (an angle is `kind: "angle"` between two edges), `add_drawing_note`, `add_drawing_hole_note`,
 `add_drawing_centermark`, `add_drawing_balloon`, `add_drawing_table`, `add_drawing_parts_list`,
 `edit_drawing_annotation`, `delete_drawing_annotation` and `export_drawing`. A section or detail
 view is `add_drawing_view` with `section_of` or `detail_of`; a view of everything is
