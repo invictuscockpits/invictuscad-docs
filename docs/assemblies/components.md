@@ -42,6 +42,13 @@ appears beside the others.
    is now.
 3. Click **Move**.
 
+### Move several at once
+
+Select several instances (Ctrl+click them in the browser or the view) and choose **ASSEMBLE ›
+Move Instance**, or click more instances while the card is open. They move together as one: an
+**Angle** turns the whole group around the first instance's origin, so they keep their places to
+each other. It's one undo step. If any of them is grounded, none moves.
+
 To place parts against each other exactly, use [connections](connections.md) instead.
 
 ## Ground an instance

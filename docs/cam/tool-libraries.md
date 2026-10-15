@@ -29,6 +29,8 @@ chip load or feed, plunge and other feeds, step-over, step-down and coolant.
 
 **Copy** duplicates the selected tool with the next free number; **Delete** removes it.
 
+Tools are listed in tool-number order, T1 first, however the library was imported or saved.
+
 ## Cutting presets
 
 Each tool can have several presets, for example one for aluminum and one for steel. The presets
@@ -57,3 +59,23 @@ When an operation runs, Cahaba Studio takes:
 - No feed exceeds the machine's slowest axis. When anything is adjusted, the operation says so.
 
 Any of these can be overridden in an individual operation.
+
+## When you change a tool
+
+An operation keeps its own copy of its tool, taken when you chose it, so a project posts the same
+program even if the library changes later. Editing a tool in the library (a new diameter after
+regrinding, a better preset) doesn't change the operations already using it.
+
+When an operation's copy no longer matches the library, it turns **amber** in the browser. Hover
+over it to see what differs, for example *The library's T3 has a different diameter.* An operation
+whose tool has been removed from every library says so too.
+
+To take the library's version:
+
+- **MANAGE › Update Tools** updates every operation in the project.
+- Right-click a setup › **Update Tools** updates only that setup's operations.
+
+Each tool is found by its identity in the library, so it's still found if you renumbered it. An
+operation keeps its preset if the updated tool still has one with that name. The toolpaths are
+worked out again straight away, and one undo takes it all back. A message lists what was updated,
+and any tool that's no longer in a library is left as it was.
