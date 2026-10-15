@@ -70,6 +70,7 @@ Clears the material inside a closed outline down to a floor.
     | **Stepover** | 0: the preset's, otherwise 40% of the diameter |
     | **Stepdown** | Depth per level |
     | **Wall stock**, **Floor stock** | Material to leave for a finishing pass |
+    | **Floor pass** | The last this much of the depth as a level of its own: a light final cut for a clean floor. The roughing levels above share the rest within the stepdown. 0 (the default) is off |
     | **Finish the walls** | A last pass along the walls at full depth (on by default) |
     | **Rest machining after** | An earlier operation with a bigger tool: cut only what it couldn't reach (corners narrower than it, gaps) |
     | **Direction** | Climb or conventional |
@@ -87,7 +88,7 @@ without overloading the tool. Pick geometry as for a pocket.
 | Field | |
 |---|---|
 | **Optimal load** | How much of the tool engages sideways. 0: 15% of the diameter. At most half the diameter |
-| **Stepdown**, **Wall stock**, **Floor stock**, **Direction** | As for a pocket |
+| **Stepdown**, **Wall stock**, **Floor stock**, **Floor pass**, **Direction** | As for a pocket |
 | **Feed up for chip thinning** | A light sideways cut makes thin chips: feed faster so they're full thickness again (never past the machine's limit). The card says how much |
 | **Helix angle**, **Helix radius** | How it enters the material (under **Linking**) |
 
