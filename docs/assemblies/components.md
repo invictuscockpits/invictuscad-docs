@@ -68,6 +68,27 @@ Every instance updates as you work.
 
 ![Editing a component in place](../assets/images/editing-component.png)
 
+## Subassemblies
+
+A component can hold instances of other components, such as an axle with its two wheels. Place the
+subassembly as many times as you need, and each copy moves as one.
+
+To make one from parts already placed:
+
+1. Select the instances, and any loose bodies that belong with them (Ctrl+click or Shift+click in
+   the view or the browser).
+2. Choose **ASSEMBLE › Make Component**, or right-click one › **Make Component**.
+
+They go into the new component exactly where they are, and its first instance is placed so that
+nothing moves. Connections between them go in with them. A connection from one of them to a part
+that isn't going in is refused: select that part too, or delete the connection first.
+
+To build one from the inside, edit the component (above) and add instances of other components
+while you're in it. A component can't hold itself, or a component that already holds it.
+
+In the browser, each copy inside a subassembly is listed under its own component, marked **in**
+the subassembly. Parts lists count every part inside, however deep.
+
 ## Linked parts
 
 A component can live in its own `.cb3` file and be used by several projects: a standard bracket,
