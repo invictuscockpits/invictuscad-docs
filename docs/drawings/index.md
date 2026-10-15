@@ -15,8 +15,10 @@ view of everything together.
 
 The drawing is listed under **Drawings** in the browser. Double-click it there to open it again.
 
-The drawing's tools are the row of icons above the sheet. Hover over one for its name and what it
-does; this page calls them by those names.
+While the drawing is open, its tools take the place of the modeling tools in the top bar, and the
+face, edge and corner filters step aside. Hover over a tool for its name and what it does; this
+page calls them by those names. In a narrow window, the tools that don't fit are under **»** at the
+end of the row.
 
 | To | Do |
 |---|---|
@@ -89,7 +91,17 @@ The view it was cut from gets the cutting line, with arrows pointing the way the
 and a letter at each end. The section is captioned **SECTION A-A** and stays in line with the
 view it came from. Letters run A, B, C on their own.
 
-Cuts are straight, right across the view. Holes and other openings are left clear of hatching.
+Holes and other openings are left clear of hatching.
+
+#### Offset sections
+
+To show features that aren't in line, such as two holes in different rows, in one section:
+
+1. After the first click, click each other point the cut should pass through, inside the view.
+2. Then click outside the view, where the section goes.
+
+The cut steps across halfway between the points. The section is hatched as though it were one
+flat cut, with no line where it steps. The cutting line on the view shows each step.
 
 A section is cut from a view seen square on (front, top, right and so on). **Section View** is
 off for an isometric view.
@@ -213,6 +225,7 @@ card.
 | **Tolerance** | See below | |
 | **Decimal places** | **As few as it needs** drops trailing zeros. A number keeps them | 100.00 |
 | **Reference** | Puts the dimension in brackets | (100) |
+| **Basic** | Puts the number in a box: an exact size that a GD&T tolerance works from | 100, boxed |
 
 The kinds of tolerance:
 
@@ -245,6 +258,20 @@ true angle in the model.
 Edges that are parallel in the view have no angle between them and can't be picked together. The
 tool stays on for the next angle; ++esc++ ends it. Move and remove an angle like any other
 dimension.
+
+## Ordinate dimensions
+
+Ordinate dimensions measure every feature from one zero, each with just its number at the end of a
+line. They suit a plate full of holes.
+
+1. Click **Ordinate**, then the corner that is the zero.
+2. Click a corner, or a hole (for its center), then where its number goes:
+    - Below or above it, for how far across the page it is from the zero.
+    - Beside it, for how far up.
+3. Repeat step 2 for each feature. The zero stays picked until you press ++esc++.
+
+Click the zero itself for its 0. When a number is put a little to one side of its feature, its
+line jogs over to it, so numbers that are close together don't crowd.
 
 ## Hole notes
 
@@ -287,6 +314,46 @@ little past each end.
 
 To change any of them: click to select, drag to move, ++delete++ to remove. Double-click a note to
 change its words, or a balloon to change its number. Right-click any of them for the same.
+
+## Surface finish
+
+1. Click **Surface Finish**, then the edge whose surface it is.
+2. Click where it goes. Within a few millimeters of the edge, it stands on the edge. Further off,
+   it's on a leader to it.
+3. On its card, give the **Roughness** (written above it, such as Ra 1.6, or 63 for microinches)
+   and the **Material**:
+
+    | Material | Symbol |
+    |---|---|
+    | **Removed (machined)** | A bar across the V (the default) |
+    | **Any process** | The plain V |
+    | **Not removed** | A circle in the V |
+
+## GD&T
+
+### Datums
+
+Click **Datum**, then the edge that is the datum, then where its letter goes. The letter goes in a
+box, on a leader ending in a triangle on the edge. Datums are lettered A, B, C on their own,
+skipping I, O and Q. Double-click one to change its letter.
+
+### Feature control frames
+
+1. Click **Feature Control Frame**, then the edge it controls. Or skip that, for a frame with no
+   leader.
+2. Click where it goes.
+3. On its card, fill in:
+
+    | Field | What it is |
+    |---|---|
+    | **Characteristic** | Straightness, flatness, circularity, cylindricity, line and surface profile, angularity, perpendicularity, parallelism, position, concentricity, symmetry, or circular or total runout |
+    | **Tolerance** | The size of the tolerance zone |
+    | **Diameter zone** | A round zone: Ø before the tolerance |
+    | **Material condition** | None, maximum material (M) or least material (L), circled after the tolerance |
+    | **Primary**, **secondary**, **tertiary datum** | Each datum's letter, with (M) or (L) after it for its material condition |
+
+The frame is drawn in boxes, the characteristic as its symbol. Double-click it to change it.
+Use **Basic** dimensions for the sizes that locate a position tolerance.
 
 ## Tables
 
@@ -335,15 +402,24 @@ when a part is moved.
 | **PDF** | Each sheet at its true size, a page each: views, dimensions, notes, tables and the title block |
 | **DXF**, **SVG** | The lines, on the layers **BORDER**, **VISIBLE**, **HIDDEN**, **DIMENSION**, **CENTER**, **HATCH** and **SECTION**, and the numbers and words on **TEXT**. Several sheets are laid side by side |
 
+## Print
+
+**Print** opens the print dialog with paper the size of the sheet. A printer with that paper
+prints each sheet at its true size; on smaller paper, each sheet is scaled down to fit, centered.
+It prints a page a sheet; choose pages to print only some sheets.
+
 ## From an assistant
 
 Over [MCP](../automation/mcp.md): `add_drawing`, `edit_drawing`, `add_drawing_view`,
 `edit_drawing_view`, `delete_drawing_view`, `add_drawing_dimension`, `edit_drawing_dimension`,
-`delete_drawing_dimension` (an angle is `kind: "angle"` between two edges; a dimension takes
-`prefix`, `suffix`, `tolerance`, `plus`, `minus`, `fit`, `places` and `reference`), `add_drawing_note`, `add_drawing_hole_note`,
-`add_drawing_centermark`, `add_drawing_balloon`, `add_drawing_table`, `add_drawing_parts_list`,
+`delete_drawing_dimension` (an angle is `kind: "angle"` between two edges, an ordinate dimension
+`kind: "ordinate"` from zero `a` to corner `b` along `axis` x or y; a dimension takes `prefix`,
+`suffix`, `tolerance`, `plus`, `minus`, `fit`, `places`, `reference` and `basic`), `add_drawing_note`,
+`add_drawing_hole_note`, `add_drawing_centermark`, `add_drawing_balloon`, `add_drawing_table`,
+`add_drawing_parts_list`, `add_drawing_finish`, `add_drawing_datum`, `add_drawing_gdt`,
 `edit_drawing_annotation`, `delete_drawing_annotation` and `export_drawing`. A section or detail
-view is `add_drawing_view` with `section_of` or `detail_of`, and a projected view with `parent` and
+view is `add_drawing_view` with `section_of` or `detail_of` (an offset section also takes
+`through`: `"25, 15; 75, 45"`), and a projected view with `parent` and
 `project` (above, below, left or right); a view of everything is
 `assembly: true`. `edit_drawing` with `sheets` sets how many sheets there are, and views, notes and
 tables take a `sheet`. `edit_drawing` with `revisions` sets the whole list:
