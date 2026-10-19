@@ -33,6 +33,7 @@ clear the profile and pick again. Open curves are ignored (unless you choose **T
 | | |
 |---|---|
 | **New body** | A separate body |
+| **Component** | A separate body in a [component](../assemblies/components.md) of its own, with its sketch |
 | **Join** | Adds material to a body |
 | **Cut** | Removes material from it (the direction flips into the part) |
 

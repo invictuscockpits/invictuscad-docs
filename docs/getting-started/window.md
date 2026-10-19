@@ -33,7 +33,7 @@ tick which tools are pinned. In a narrow window, panels that don't fit move unde
 |---|---|
 | CREATE | Sketch, Extrude, Revolve, Hole, Sweep, Loft, Thread, Box, Reference Plane |
 | MODIFY | Fillet, Chamfer, Shell, Combine, Split Body, Mirror, Rectangular Pattern, Circular Pattern, Path Pattern, Delete, Parameters |
-| ASSEMBLE | Make Component, Connect, Move Instance, Update Links |
+| ASSEMBLE | New Component, Make Component, Connect, Move Instance, Update Links |
 | MAKE | [Drawing](../drawings/index.md), Export Flat, Nest Parts |
 | INSPECT | Measure, Section Analysis |
 

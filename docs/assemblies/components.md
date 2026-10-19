@@ -4,6 +4,15 @@ A **component** is a part definition; an **instance** is one placed copy of it. 
 component and every instance changes. Use components for anything that appears more than once,
 or to keep an assembly's parts separate.
 
+## Start a new component
+
+Choose **ASSEMBLE › New Component**, or right-click empty space in the browser › **New
+Component**. It's empty, placed at the origin, and you're editing it straight away: the sketches,
+features and bodies you make next go into it. Click **Finish Component** when you're done.
+
+To make one body its own component as you create it, choose **Component** as the operation on
+the Extrude card (or **New component** on Revolve, Sweep and Loft).
+
 ## Make a component
 
 1. Select the bodies that make up the part (in the browser or the view).

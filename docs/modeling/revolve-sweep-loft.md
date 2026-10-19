@@ -7,7 +7,7 @@ They share one way of working:
 2. Click the geometry for each field in turn. After each pick the card moves to the next empty
    field; click a field to go back to it.
 3. Set the values. A preview shows the result.
-4. Choose the **Result**: **New body**, **Join**, **Cut** or **Intersect**. For the last three,
+4. Choose the **Result**: **New body**, **New component** (a new body in a [component](../assemblies/components.md) of its own), **Join**, **Cut** or **Intersect**. For the last three,
    set **Body** to the body to change (it defaults to the body the sketch is on).
 5. Click **OK**.
 
