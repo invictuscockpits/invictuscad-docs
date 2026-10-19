@@ -9,8 +9,8 @@ run them.
    is used.
 2. Click a **MILL 2D** tool: **Facing**, **Adaptive Clearing**, **Pocket**, **Contour**,
    **Drilling**, **Chamfer**, **Trace**, **Bore**, **Thread Mill** or **V-Carve**. (Only four are
-   shown at once; click the panel name **MILL 2D** for the rest.) **Program Stop** is under
-   **ACTIONS**.
+   shown at once; click the panel name **MILL 2D** for the rest.) Or a **MILL 3D** tool, **Parallel**
+   or **Waterline**, to finish a curved surface. **Program Stop** is under **ACTIONS**.
 3. Fill in the card. The toolpath previews as you change values. If it can't be made, the card
    says why and **OK** stays disabled.
 4. Click **OK**.
@@ -250,6 +250,49 @@ Only thread mills are offered.
 The tool arcs on from the hole's center (or from outside a boss), climbs the helix one pitch a
 turn and arcs off. Climb milling: inside, a right-hand thread is cut from the bottom up; outside,
 from the top down.
+
+## Parallel
+
+3D finishing for shallow, flowing surfaces: passes in straight lines across the part, each one
+following its surface. Use a ball, bull nose or flat end mill; only those are offered.
+
+The tool follows the setup's bodies, touching the surface without cutting into it, however the
+surface curves. Rough the part first (Adaptive Clearing or Pocket), leaving some stock, then
+finish with Parallel.
+
+1. Optionally click the **Area** field, then faces (their outline seen from above), a sketch
+   region or an outline. The tool's center stays inside it. Without one, it covers the whole stock.
+2. Set the passes:
+
+    | Field | |
+    |---|---|
+    | **Stepover** | Between passes. 0: 10% of the diameter. Smaller gives a smoother finish and takes longer |
+    | **Pattern** | **Zigzag** (default): every other pass back the other way, linked along the surface. **One way**: all the same way, lifting between them |
+    | **Angle** | The passes' direction, from X |
+    | **Stock to leave** | Left on the surface everywhere |
+    | **Tolerance** | How closely the path follows the surface (default 0.01 mm) |
+    | **Area offset** | The area grown (or, negative, shrunk) by this much |
+
+Passes are sampled finely, with extra points wherever the surface bends between them. On steep
+walls the passes are far apart across the wall, so finish those with Waterline.
+
+## Waterline
+
+3D finishing for steep walls: loops round the part at heights a stepdown apart, each where the
+tool just touches the surface at that height.
+
+1. Optionally click the **Area** field, as for Parallel.
+2. Set the passes:
+
+    | Field | |
+    |---|---|
+    | **Stepdown** | Between loops. 0: 10% of the diameter |
+    | **Direction** | **Climb** (default) or **Conventional** |
+    | **Stock to leave**, **Tolerance**, **Area offset** | As for Parallel |
+
+Loops run from the top of the part down to the **Bottom**. The tool stays down from one loop to the
+next when they're close and nothing is in the way; otherwise it lifts. Flat areas aren't followed
+round, so finish those with Parallel.
 
 ## Program Stop
 
