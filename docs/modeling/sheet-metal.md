@@ -101,8 +101,9 @@ Where two of the edges meet at a square corner of the sheet and the flanges are 
 the corner the way a blank folds up: both bends end at the corner, and each wall runs on past it
 until its inside face is a small **Corner gap** (0.2 mm unless you change it) from the other's.
 The walls' ends are square to them, as they're cut on the blank, so outside the corner there's a
-notch the thickness of the sheet. Under **Corners**, choose **Open** to stop each wall at the
-end of its edge instead. Other corners (other angles, a corner that isn't square) stay open.
+notch the thickness of the sheet. The same goes where a flange meets one you made before with
+another Flange: that one's wall runs on past the corner too. Under **Corners**, choose **Open**
+to stop each wall at the end of its edge instead. Other corners (other angles, a corner that isn't square) stay open.
 
 On the blank, the square where the two bends would cross is left out: that's the corner's
 relief, and it's what **Corner relief** **Square** (the default) gives. To cut more round the
@@ -126,7 +127,12 @@ A **Hem** folds an edge right back over the sheet, to stiffen it or to take off 
 
 A sheet metal body has a **Flat Pattern** row under it in the browser. Double-click it, or choose
 **SHEET METAL › MAKE › Edit Flat Pattern**, and the part lies flat. The face you had selected (or
-its largest flat face) stays where it is, and the rest lies in its plane.
+its largest flat face) stays where it is, and the rest lies in its plane. Dashed lines across it
+show where it bends.
+
+**Export DXF**, beside **Finish Flat Pattern** at the top of the window, saves the blank for the
+laser: its outline, its holes, and its bend lines on their own layer, with what you've done to
+it flat.
 
 Work on it like any part: sketch on it, cut through it, add holes, chamfer its corners, pocket or
 engrave it. Then click **Finish Flat Pattern** at the top of the window (or double-click the row

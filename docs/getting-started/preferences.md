@@ -6,8 +6,9 @@
 |---|---|
 | **Units** | The units a new document starts in. Each document keeps its own; change one with the **mm ▾** button |
 | **Physical material** | What bodies in a new document are made of until you give them a material: their mass, their look and, for sheet metal, their K-factor and relief size. It's saved with the document |
+| **Hide a sketch once a feature uses it** | On (the default), making an Extrude, Revolve, Sweep, Loft, Flange or another feature from a sketch turns the sketch's eye off in the browser. One undo brings both back; click the eye to show it again |
 | **Sizes to start on** | Which hole and thread sizes the Hole card starts on: **Metric**, **Inch**, or **The document's units**. The card's **Standard** switch changes it for one hole |
-| **Thickness**, **Bend radius** | The sheet a new sheet metal Flange starts at. Bend radius 0 uses the thickness |
+| **Thickness**, **Bend radius** | The sheet a new sheet metal Flange starts at. Bend radius 0 uses the material's typical radius for the thickness |
 | **SpaceMouse** | **Speed**, and **Reverse panning**, **zooming** or **turning** for a 3Dconnexion SpaceMouse |
 
 Preferences apply to documents you start afterwards. An empty, untouched document also takes them
