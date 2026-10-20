@@ -11,7 +11,7 @@ In the Design workspace, the tabs in the row above the tools choose which tools 
 | Tab | Tools |
 |---|---|
 | **SOLID** | Everything for solid parts (the usual panels) |
-| **SHEET METAL** | **CREATE**: Sketch, Extrude, Flange, Edge Flange, Hem, Convert to Sheet Metal, Hole, Reference Plane. **MAKE**: Edit Flat Pattern, Export Flat Pattern, Nest Parts. MODIFY, ASSEMBLE and INSPECT as on the Solid tab |
+| **SHEET METAL** | **CREATE**: Sketch, Extrude, Flange, Hem, Convert to Sheet Metal, Hole, Reference Plane. **MAKE**: Edit Flat Pattern, Export Flat Pattern, Nest Parts. MODIFY, ASSEMBLE and INSPECT as on the Solid tab |
 
 Editing a sheet metal feature (double-click it in the [History panel](history.md#the-history-panel)) switches to the Sheet Metal tab.
 
@@ -21,21 +21,26 @@ There are two ways to make a sheet metal part.
 
 ### Flange
 
-A **Flange** starts a sheet metal part and sets its rules. It works from a sketch in two ways:
+**Flange** does two jobs: it starts a sheet metal part from a sketch, or it bends walls up from
+a part's edges ([below](#add-a-wall-flange-on-edges)). Choose it with a sketch selected in the
+browser (or before there's any part) and it starts a part; otherwise click a sketch on its card
+to switch to starting one.
+
+Started from a sketch, a flange sets the part's rules. It works in two ways:
 
 - **A closed sketch** (a rectangle, any outline with holes): a flat plate the thickness.
 - **An open profile of lines** (an L, a U, a hat section): a bent part in one step. Each corner
   becomes a bend, the lines are one face of the sheet, and the part runs **Width** along the
   sketch's normal.
 
-1. Draw the sketch, then choose **SHEET METAL › CREATE › Flange**.
+1. Draw the sketch, select it in the browser, then choose **SHEET METAL › CREATE › Flange**.
 2. Click the sketch for **Profile**.
 3. Set the rules and size:
 
     | Field | |
     |---|---|
     | **Thickness** | The sheet's thickness |
-    | **Bend radius** | The inside radius of every bend. 0 uses the thickness |
+    | **Bend radius** | The inside radius of every bend. It starts at the material's typical radius for the thickness ([below](#bend-radius)); type your own to change it |
     | **K-factor** | Where the neutral layer sits, as a share of the thickness from the inside of a bend. It sets how long each bend is when flat. It starts at the part's material's value (see below); change it to use your own |
     | **Width** | Open profiles: how far the part runs from the sketch |
     | **Thickness side** | Open profiles: the thickness to the left or right of the lines, walking them from the first |
@@ -49,7 +54,7 @@ A **Flange** starts a sheet metal part and sets its rules. It works from a sketc
 
 A plate you made with **Extrude**, or a part imported from a STEP file, becomes sheet metal with
 **SHEET METAL › CREATE › Convert to Sheet Metal**. Pick the body. Its shape doesn't change; it
-gets rules. **Thickness** 0 measures it, **Bend radius** 0 uses the thickness.
+gets rules. **Thickness** 0 measures it; **Bend radius** starts at the material's typical radius.
 
 Edge flanges and hems also work on a plain plate that hasn't been converted: they measure the
 sheet's thickness at the edge you pick.
@@ -62,17 +67,51 @@ When a part's rules don't set a K-factor, it comes from the part's
 material uses 0.44. Change the material and the flat pattern follows. Type a K-factor on the
 Flange or Convert to Sheet Metal card to set your own, whatever the material.
 
-## Add a wall: Edge Flange
+### Bend radius
 
-1. Choose **SHEET METAL › CREATE › Edge Flange**.
-2. Click a straight edge along the outside of the sheet.
+Unless you type one, a new part's bend radius is what the material actually bends to at that
+thickness. For the materials SendCutSend bends (5052 aluminum, mild steel, 304 and 316
+stainless, brass and copper) it's the radius in [their published bend
+specs](https://sendcutsend.com/bending-calculator/#bend-specs), so a part you send them folds as
+modeled. Between two of their thicknesses it's in proportion. For other materials it's a common
+shop minimum: 2 thicknesses for 6061-T6, 3 for 7075, 2024 and titanium, 1 to 2.5 for the other
+steels, more for thick plate. A part with no material bends at 1 thickness. The radius is set
+when the part is made and kept with it, so changing the material later doesn't change parts
+you've already made: type a new **Bend radius** for that.
+
+## Add a wall: Flange on edges
+
+1. Choose **SHEET METAL › CREATE › Flange**.
+2. Click a straight edge along the outside of the sheet; only edges are picked, not the faces
+   beside them. Ctrl+click more edges to flange them all at once: each gets its own flange. Any
+   plate works, even one extruded the ordinary way: its thickness is measured at the edge.
 3. Set **Angle** (90° by default) and **Length** (the flat wall past the bend), or drag the arrow
-   in the view. **Bend radius** 0 uses the part's. **Flip** bends it the other way.
+   in the view. **Bend radius** 0 uses the part's (on a plate that isn't sheet metal yet, the
+   material's typical radius). **Flip** bends it the other way.
 4. Under **Extent**, **Offset 1** and **Offset 2** pull the flange in from the edge's ends, for a
    flange narrower than its edge. Each end pulled in gets a **Relief**, a slot cut into the sheet
-   beside the bend so it doesn't tear: **Rectangular** or **Round**, **Relief width** (0: the
-   thickness) and **Relief depth** (0: bend radius plus thickness), or **None**.
+   beside the bend so it doesn't tear: **Rectangular** or **Round**, or **None**. **Relief
+   width** and **Relief depth** start at the material's (1 to 2 thicknesses wide, deeper than the
+   bend); type your own to change them.
 5. Click **OK**.
+
+### Corners
+
+Where two of the edges meet at a square corner of the sheet and the flanges are 90°, they close
+the corner the way a blank folds up: both bends end at the corner, and each wall runs on past it
+until its inside face is a small **Corner gap** (0.2 mm unless you change it) from the other's.
+The walls' ends are square to them, as they're cut on the blank, so outside the corner there's a
+notch the thickness of the sheet. Under **Corners**, choose **Open** to stop each wall at the
+end of its edge instead. Other corners (other angles, a corner that isn't square) stay open.
+
+On the blank, the square where the two bends would cross is left out: that's the corner's
+relief, and it's what **Corner relief** **Square** (the default) gives. To cut more round the
+corner:
+
+- **Square** with a **Relief size** bigger than a bend's length when flat: a bigger square,
+  centered where the bends' middles cross.
+- **Round**: a circle that size on the blank (0: a bend's length flat plus the thickness). It
+  takes a little longer to work out.
 
 ## Hem
 
