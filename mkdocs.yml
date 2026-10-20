@@ -105,6 +105,7 @@ nav:
       - Drawings: drawings/index.md
   - Making Parts:
       - Flat Parts: making/flat-parts.md
+      - DXF Builder: making/dxf-builder.md
       - Nest Parts on Sheets: making/nesting.md
   - CAM:
       - From Model to G-code: cam/index.md

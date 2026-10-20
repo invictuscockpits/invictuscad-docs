@@ -56,10 +56,10 @@ For laser cutters, plasma tables and routers (LightBurn, SheetCam, Vectric and s
 | Layer | Contains | Color |
 |---|---|---|
 | **CUT** | The sketch's curves | Red |
-| **ENGRAVE** | Text, as outlines | Blue |
+| **ENGRAVE** | Text, and filled shapes, as closed outlines | Blue |
 
-Curves you've given a color, and regions you've filled, go on a layer for each color instead:
-see [Color and Fill](artwork.md#export-for-a-laser).
+Each outline is written once. Colors don't make layers here; for a DXF with a layer per color,
+set up for LightBurn, use the [DXF Builder](../making/dxf-builder.md).
 
 If the sketch has [layers](layers.md), each is written as a layer of the file under its own name
 and color, and hidden layers are left out: see

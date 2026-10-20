@@ -19,10 +19,23 @@ Each **Apply** is one undo step.
 From the model, Style works on any sketch that's showing. While you're sketching, it works on
 that sketch.
 
+### A whole sketch or layer at once
+
+For lettering made of outlines, with hundreds of curves, set **Apply to** to **Whole sketch** or
+**A layer** instead of clicking each piece:
+
+- From the model, pick the sketch in the browser. While sketching, it's that sketch. For a layer,
+  choose it under **Layer**.
+- **Paint** › **Fill its shapes** fills every closed shape in one go. A letter's holes (the middle
+  of an A or an O) stay open. With **Color** › **None**, it takes the fills there off.
+- **Paint** › **Color its curves** colors every curve, or with **None** takes their color off.
+
 ## How it shows
 
 - Colored curves are drawn in their color, in place of the sketch's usual working colors.
-- Filled regions are drawn flat in their color, on the plane or face the sketch is on.
+- Filled regions are drawn flat in their color, on the plane or face the sketch is on. The
+  curves around them aren't drawn over the fill, so lettering shows at its true weight. While
+  you're editing the sketch, they're drawn so you can work on them.
 - Both hide and show with the sketch.
 
 A line weight makes a line look heavier on screen, but it isn't drawn to scale: it stays the same
@@ -33,19 +46,17 @@ needs applying again.
 
 ## Export for a laser
 
-[Exporting the sketch](import-export.md#export-a-sketch) to DXF or SVG puts each color on a layer
-of its own, which is how LightBurn and similar programs decide what to cut, score and engrave:
+Colors and fills decide how a sketch looks, not which layer it goes to. [Exporting the
+sketch](import-export.md#export-a-sketch) to DXF or SVG writes each outline once:
 
 | Layer | Contains |
 |---|---|
-| **STROKE_RRGGBB** | Curves with that color, for example **STROKE_FF0000** for red |
-| **FILL_RRGGBB** | Regions filled with that color, as closed outlines to fill |
-| The layer's own name | Unstyled curves on one of the sketch's [layers](layers.md) |
-| **CUT**, **ENGRAVE** | Everything else, as before |
+| The layer's own name | Curves on one of the sketch's [layers](layers.md) |
+| **ENGRAVE** | Text, and filled shapes as closed outlines (holes too), ready to fill |
+| **CUT** | Everything else |
+| **CONSTRUCTION** | Construction curves, only if you ask for them |
 
-SVG files carry the exact colors and real fills. DXF files can only name a color from a fixed
-table, so an unusual color is written as the nearest one; the layer's name still gives the exact
-color.
+For a DXF with a layer per color, set up for LightBurn, use the [DXF Builder](../making/dxf-builder.md).
 
 ## From an assistant
 
