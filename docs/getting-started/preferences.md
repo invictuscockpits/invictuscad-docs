@@ -14,6 +14,23 @@
 Preferences apply to documents you start afterwards. An empty, untouched document also takes them
 straight away.
 
+## Drawings
+
+What goes in the title block of every [drawing](../drawings/index.md#the-sheet), for whoever makes
+them:
+
+| Preference | Where it goes |
+|---|---|
+| **Company** | Over the drawing's title |
+| **Copyright** | In bold at the foot of the title block: `Copyright 2026 Invictus Machine LLC` |
+| **Notice** | Under the copyright, a line each: a license, say. Blank lines are left out |
+| **Logo** | At the left of the title block's top row, fitted to it. **Choose...** a PNG, JPG or SVG; **Remove** takes it off |
+
+Leave any of them empty and the title block goes without it; with no copyright or notice, it is
+shorter. A picture wider than 1200 pixels is made smaller when it's chosen; an SVG is drawn as its
+shapes, sharp at any size. They apply to every drawing at once, open ones too, and to drawings
+exported by an assistant.
+
 ## Keyboard shortcuts
 
 **Keyboard Shortcuts…** in Preferences lists every command with its key. Use the search box to

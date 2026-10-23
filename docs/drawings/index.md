@@ -121,15 +121,58 @@ keeps the hatching.
 
 Sections and details follow the model, and you can dimension and note them like any other view.
 
+### Sketches in a view
+
+A view can show sketches as well as the body: a panel's lettering, say. Each sketch is drawn as the
+view looks at it:
+
+- its curves as lines, over the body;
+- its filled regions filled, so lettering reads on paper: a light fill (white lettering) prints
+  light gray, a dark one black. A letter's holes stay open;
+- nothing of it that's behind the part: the lettering on a front face shows in the top view, not
+  the bottom one;
+- nothing when the view sees it edge on. An isometric view shows it at its angle.
+
+A sketch in a view of the assembly is drawn wherever its component is placed. The sketches follow
+the model, and nothing in them can be dimensioned: dimensions and notes measure the body.
+
+For now this is set from an assistant: `sketches` on `add_drawing_view` or `edit_drawing_view`,
+the sketches separated by `;` (`"Legend; Upper Legend"`), and `""` for none.
+
+### Leaving features out
+
+A view can draw its body without some of its features, as if they were suppressed for that view
+alone: a light plate without its LED pockets, say. The model stays as it is, and other views still
+show them. The view's sections, details and projected views leave the same features out.
+
+For now this is set from an assistant: `leave_out` on `add_drawing_view` or `edit_drawing_view`,
+the features separated by `;` (`"LED Pockets; LED Pockets Edge"`), and `""` for none.
+
 ## The sheet
+
+Each sheet has a frame with zones around its edge, numbered across from the left and lettered down
+from the top, about 50 mm apart, so a spot on the sheet can be called out as, say, **C4**.
+
+The title block, in the bottom right corner, has:
+
+- your logo, your company, the drawing's title and a line describing it;
+- boxes for **DRAWN BY**, **DATE**, **STATUS**, **SIZE**, **SCALE**, **REV** and **SHEET**;
+- a row for **NUMBER**, **UNITS** and **TOLERANCE UNLESS NOTED**;
+- your copyright line and notice, at the foot.
+
+The logo, company, copyright and notice are the same on every drawing: set them in
+[Preferences](../getting-started/preferences.md#drawings). The rest are each drawing's own. The
+description and status are set from an assistant for now: `description` and `status` on
+`add_drawing` or `edit_drawing` (`"DRAFT"`, `"RELEASED"`).
 
 **Sheet** opens a card for:
 
 - **Size**: A4 to A0, Letter, Tabloid, ANSI C or ANSI D, landscape.
 - **Scale**: of the views. 0.5 is half size (1:2), 2 is twice (2:1).
 - **Title**, **Drawn by**, **Date** and **Number**, which fill in the title block.
-- **General tolerance**: the tolerance of dimensions that don't carry their own, such as ±0.1. It
-  gets a box in the title block, **TOLERANCE UNLESS NOTED**. Leave it empty for no box.
+- **General tolerance**: the tolerance of dimensions that don't carry their own, such as ±0.1,
+  written in the title block's **TOLERANCE UNLESS NOTED** box. Leave it empty to leave the box
+  blank.
 - **Projection**: third angle or first angle, for where [projected views](#projected-views) go.
 - **Units on dimensions**: writes each length with its unit after it, `50 mm`.
 - **Second unit**: writes each length again in another unit, in square brackets: `50 [1.969]`, or
@@ -152,7 +195,7 @@ the date and who made it.
 them), today's date, and the same name as the last. Type what changed, then click **OK**.
 
 All the revisions are listed in a **REVISIONS** block at the top right of the first sheet, and the
-latest letter is in a **REV** box in every sheet's title block. To correct or remove one, change its
+latest letter is in the **REV** box of every sheet's title block. To correct or remove one, change its
 row or select it and click **Remove**.
 
 ### More than one sheet
@@ -399,8 +442,8 @@ when a part is moved.
 
 | Format | Contains |
 |---|---|
-| **PDF** | Each sheet at its true size, a page each: views, dimensions, notes, tables and the title block |
-| **DXF**, **SVG** | The lines, on the layers **BORDER**, **VISIBLE**, **HIDDEN**, **DIMENSION**, **CENTER**, **HATCH** and **SECTION**, and the numbers and words on **TEXT**. Several sheets are laid side by side |
+| **PDF** | Each sheet at its true size, a page each: views, the sketches in them with their filled regions, dimensions, notes, tables, and the frame and title block with your logo |
+| **DXF**, **SVG** | The lines, on the layers **FRAME**, **BORDER**, **TITLE**, **VISIBLE**, **HIDDEN**, **SKETCH**, **DIMENSION**, **CENTER**, **HATCH** and **SECTION**, and the numbers and words on **TEXT**. Several sheets are laid side by side. The logo and filled regions are in the PDF only |
 
 ## Print
 
@@ -421,6 +464,8 @@ Over [MCP](../automation/mcp.md): `add_drawing`, `edit_drawing`, `add_drawing_vi
 view is `add_drawing_view` with `section_of` or `detail_of` (an offset section also takes
 `through`: `"25, 15; 75, 45"`), and a projected view with `parent` and
 `project` (above, below, left or right); a view of everything is
-`assembly: true`. `edit_drawing` with `sheets` sets how many sheets there are, and views, notes and
+`assembly: true`. A view takes `sketches` (sketches drawn in it) and `leave_out` (features its body
+is drawn without), each separated by `;`. `edit_drawing` takes `description` and `status` for the
+title block, and with `sheets` sets how many sheets there are; views, notes and
 tables take a `sheet`. `edit_drawing` with `revisions` sets the whole list:
 `"A; Initial release; 2026-10-13; CJ | B; Hole moved; 2026-11-02; CJ"`.
