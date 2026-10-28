@@ -15,6 +15,9 @@
     - **Center distance** between round items, such as hole spacing.
 4. Click a third time to start over. ++esc++ clears the picks; press it again to close Measure.
 
+A placed part is measured where it is in the assembly, as you see it, including one moved into
+place by a [connection](../assemblies/connections.md).
+
 ![Measuring between two items](../assets/images/measure.png)
 
 ## Whole bodies

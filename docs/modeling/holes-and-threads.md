@@ -34,6 +34,9 @@
 
 ![A hole](../assets/images/hole.png)
 
+A hole cuts the body it reaches, even from a sketch on a plane or on a placed part's face: it
+goes into that part's body, where that copy is.
+
 The holes are placed by a sketch on that face, which is created for you and hidden afterwards.
 To position them exactly, double-click that sketch in the browser and dimension its points, like
 any other sketch.

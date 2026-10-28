@@ -8,7 +8,7 @@ From left to right:
 
 | | |
 |---|---|
-| **☰ Menu** | **File** (New, Open, Save, Save As, Show Backups Folder), **Edit** (Undo, Redo, Delete, Clear Selection, [Preferences](preferences.md)), **Create**, **View** (Fit, Front, Top, Right, Isometric, Browser, Command Log) and **Help** (License, Capture Window, Open Crash Reports Folder) |
+| **☰ Menu** | **File** (New, Open, Save, Save As, Show Backups Folder), **Edit** (Undo, Redo, Delete, Clear Selection, [Preferences](preferences.md)), **Create**, **View** (Fit, Front, Top, Right, Isometric, Origin, Grid, Browser, Command Log) and **Help** (License, Capture Window, Open Crash Reports Folder) |
 | **Document name** | A **•** after it means there are unsaved changes. Hover it for the file's full path |
 | **Undo / Redo** | ++ctrl+z++ / ++ctrl+y++. Hover them to see which step they'd undo or redo |
 | **Workspaces** (the sidebar on the left) | **Design** (++ctrl+1++), the [CAM workspace](../cam/index.md) (++ctrl+2++) and [Scan to CAD](../scan/index.md) (++ctrl+3++) |
@@ -21,6 +21,7 @@ From left to right:
 | **🔍 Search** | Find any tool by name (++ctrl+k++) |
 | **Fit** | Fit the model in the view (++f++ or ++home++) |
 | **Origin** | Show the X, Y and Z axes through the origin, dimmed (also **View › Origin**) |
+| **Grid** | Show the ground grid on the XY plane outside sketches; a sketch shows its own while you draw (also **View › Grid**). On at first. Its lines widen apart as you zoom out |
 | **Browser**, **Command Log** | Show or hide them (++ctrl+b++, ++ctrl+l++) |
 
 ### Tool panels
@@ -37,11 +38,24 @@ tick which tools are pinned. In a narrow window, panels that don't fit move unde
 | MAKE | [Drawing](../drawings/index.md), Export Flat, Nest Parts, [DXF Builder](../making/dxf-builder.md) |
 | INSPECT | Measure, Section Analysis |
 
+## Several designs at once
+
+Each open design has a tab along the top of the window. **+** (or **New**, ++ctrl+n++) starts a
+new one, and opening a project shows its tab if it's already open. ++ctrl+tab++ and
+++ctrl+shift+tab++ move between tabs, and ++ctrl+w++ closes one (asking to save it first).
+
+To put a design on another screen, drag its tab down (or up) off the strip: it becomes a window of
+its own where you let go. Or right-click the tab › **Move to New Window**. Right-click a tab in
+that window › **Move to Main Window** (or to another window) to put it back. A window closes when
+its last design leaves it, and closing the main window closes the others, each design asking to
+save first. Each design keeps its undo history and view wherever it goes.
+
 ## Browser
 
-The panel at the top left lists everything in the document, in folders: **Components**,
-**Instances**, **Connections**, **Planes**, **Analysis** (sections and deviations), **Scans** (scans
-and the shapes fitted to them), **Sketches**, **Bodies** and **Setups** (CAM). Features and patterns
+The panel at the top left lists everything in the document, in folders: **Components** (each part
+once, with its other copies beside it: see [Components](../assemblies/components.md#in-the-browser)),
+**Connections**, **Planes**, **Analysis** (sections and deviations), **Scans** (scans and the shapes
+fitted to them), **Sketches**, **Bodies** and **Setups** (CAM). Features and patterns
 aren't listed here: they're steps of the [History panel](../modeling/history.md#the-history-panel),
 in the order the model is built.
 
@@ -49,7 +63,7 @@ in the order the model is built.
 |---|---|
 | Show or hide something | Click its eye. A folder's eye hides or shows everything in it |
 | Rename | Select and press ++f2++, or right-click › **Rename**. Only the name you see changes; everything that uses it keeps working |
-| Edit | Double-click a sketch, plane, component, instance or connection to open it (a feature: double-click it in the History panel) |
+| Edit | Double-click a sketch, plane, component, copy or connection to open it (a feature: double-click it in the History panel) |
 | More actions | Right-click: export, make component, save as footprint, link to file, post... |
 | Find out why something failed | Failed features are red in the History panel; hover for the reason |
 

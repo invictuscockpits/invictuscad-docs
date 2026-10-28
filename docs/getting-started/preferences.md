@@ -4,6 +4,7 @@
 
 | Preference | What it does |
 |---|---|
+| **Theme** | **Dark** (the default) or **Light**: the whole app, the 3D view too. It takes effect the next time Cahaba Studio starts |
 | **Units** | The units a new document starts in. Each document keeps its own; change one with the **mm ▾** button |
 | **Physical material** | What bodies in a new document are made of until you give them a material: their mass, their look and, for sheet metal, their K-factor and relief size. It's saved with the document |
 | **Hide a sketch once a feature uses it** | On (the default), making an Extrude, Revolve, Sweep, Loft, Flange or another feature from a sketch turns the sketch's eye off in the browser. One undo brings both back; click the eye to show it again |

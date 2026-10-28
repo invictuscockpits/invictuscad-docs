@@ -108,6 +108,11 @@ this sketch's plane. The projected curves stay **linked**: when the source chang
 2. Click the geometry to bring in. Tick **As construction** to use it only for reference.
 3. Click **Project**.
 
-Projected curves are violet and can't be moved; constrain your own geometry to them.
+Projected curves are violet and can't be moved; constrain your own geometry to them. A projected
+circle (or an arc that goes all the way round) gets a point at its center, held there, to put a
+hole on or dimension to. Round edges of an imported part come in as true circles and arcs.
+
+You can project from a placed copy of a part, even one held by a [connection](../assemblies/connections.md)
+to the part this sketch is on.
 
 ![The Project card](../assets/images/project-card.png)

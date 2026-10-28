@@ -26,6 +26,9 @@ Hollows a body out to a wall thickness: enclosures, cups, cases.
    keeps the inside size.
 4. Click **OK**.
 
+Rounded outside corners smaller than the wall is thick come out square on the inside, so no wall is
+thinner than the thickness; the outside keeps its rounds.
+
 ![Shell](../assets/images/shell.png)
 
 ## Change them later

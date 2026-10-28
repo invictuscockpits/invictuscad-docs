@@ -8,7 +8,8 @@ Most parts start as a **sketch**: 2D geometry drawn on a flat plane, which you t
 1. In the **DESIGN** workspace, click **Sketch** in the **CREATE** panel.
 2. Choose where to draw:
     - **On a face:** select one flat face of a body first, then click **Sketch**. The sketch is
-      created on that face straight away.
+      created on that face straight away, and stays on it: make the extrusion taller and the
+      sketch, with whatever you built from it (holes, say), moves up with the face.
     - **On a plane:** with nothing selected, click **Sketch**. The three origin planes appear —
       XY (blue), XZ (green) and YZ (red) — along with any [reference planes](../modeling/reference-planes.md).
       Click one, or click any flat face. **Esc** cancels.

@@ -33,7 +33,7 @@ clear the profile and pick again. Open curves are ignored (unless you choose **T
 | | |
 |---|---|
 | **New body** | A separate body |
-| **Component** | A separate body in a [component](../assemblies/components.md) of its own, with its sketch |
+| **New component** | A separate body in a [component](../assemblies/components.md) of its own, with its sketch |
 | **Join** | Adds material to a body |
 | **Cut** | Removes material from it (the direction flips into the part) |
 
@@ -42,8 +42,8 @@ body, and Join is what the card starts with.
 
 A sketch on an origin plane, a reference plane or a plane extracted from a scan starts with
 **New body**. Choose **Join** or **Cut** and the extrusion goes into the body it reaches: the
-card says which (*joins Body1*). If it doesn't reach a body, the card says so; change the
-distance or direction.
+card says which (*joins Body1*). It finds a part's body at any of its placed copies, and builds
+into it there. If it doesn't reach a body, the card says so; change the distance or direction.
 
 ## Thin wall
 

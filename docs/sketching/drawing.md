@@ -92,8 +92,10 @@ Type to fix them:
 
 ## Snapping
 
-- The cursor snaps to existing points, ends, centers and the origin when it comes close. The
-  status line shows **snap** when it does.
+- The cursor snaps to existing points, ends, centers and the origin when it comes close, and a
+  bright yellow ring shows where. Once on a point it holds there until you move well off it, so it
+  doesn't flicker. Snapped onto a line, circle or arc, it shows a yellow cross; on the grid, a small
+  plus. The status line shows **snap** when it does.
 - A point placed on another point is joined to it with a **coincident** constraint.
 - Lines within 2° of horizontal or vertical snap straight and get a **horizontal** or
   **vertical** constraint.
